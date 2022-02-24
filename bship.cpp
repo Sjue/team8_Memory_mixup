@@ -919,7 +919,7 @@ void render(void)
 	//show text above each grid...
 	//
 	{
-		unsigned int color = 0x00ffffdd;
+		unsigned int color = 0x00fe4164;
 		Rect r;
 		r.left = xres/4;
 		r.bot  = yres-100;
