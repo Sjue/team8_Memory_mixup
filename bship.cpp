@@ -106,8 +106,8 @@ public:
 			sscanf(line, "%i %i", &width, &height);
 			fgets(line, 200, fpi);
 			//get pixel data
-			int n = width * height * 3;			
-			data = new unsigned char[n];			
+			int n = width * height * 3;
+			data = new unsigned char[n];
 			for (int i=0; i<n; i++)
 				data[i] = fgetc(fpi);
 			fclose(fpi);
@@ -178,7 +178,7 @@ public:
 		if(vi == NULL) {
 			printf("\n\tno appropriate visual found\n\n");
 			exit(EXIT_FAILURE);
-		} 
+		}
 		Colormap cmap = XCreateColormap(dpy, root, vi->visual, AllocNone);
 		swa.colormap = cmap;
 		swa.event_mask = ExposureMask |
@@ -296,7 +296,7 @@ int main()
 		timeCopy(&timeStart, &timeCurrent);
 		//4. Add time-span to our countdown amount.
 		physicsCountdown += timeSpan;
-		//5. Has countdown gone beyond our physics rate? 
+		//5. Has countdown gone beyond our physics rate?
 		//       if yes,
 		//           In a loop...
 		//              Apply physics
@@ -670,7 +670,7 @@ void check_mouse(XEvent *e)
 	if (x == savex && y == savey)
 		return;
 	savex=x;
-	savey=y;	
+	savey=y;
 	//
 	//is the mouse over any grid squares?
 	//
@@ -930,7 +930,7 @@ void render(void)
 		//
 		r.bot  = yres-50;
 		r.left = xres/2;
-		ggprint16(&r, 0, 0x0088aaff, "BATTLESHIP GAME STARTER KIT");
+		ggprint16(&r, 0, 0x0088aaff, "MESSY MEMORY");
 	}
 	//
 	//draw all buttons
@@ -995,5 +995,3 @@ void render(void)
 	ggprint16(&r, 20, 0x00ffff00, "nships sunk: %i",nshipssunk);
 	ggprint16(&r, 20, 0x00ffff00, "nbombs left: %i",nbombs);
 }
-
-
