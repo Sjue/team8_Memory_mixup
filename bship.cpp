@@ -22,6 +22,8 @@
 //#include <GL/glu.h>
 #include "log.h"
 #include "fonts.h"
+#include "sjue.h"
+extern class Credits credits;
 
 //macros
 #define rnd() (double)rand()/(double)RAND_MAX
@@ -32,6 +34,7 @@ void render();
 void get_grid_center(const int g, const int i, const int j, int cent[2]);
 int xres=1200;
 int yres=800;
+int credits_state = 0;
 //
 #define MAXGRID 16
 #define GRIDDIM 10
@@ -519,6 +522,8 @@ void check_keys(XEvent *e)
 		case XK_Escape:
 			done=1;
 			break;
+		case XK_c:
+			credits_state = !credits_state;
 		case XK_F2:
 			gamemode++;
 			if (gamemode == MODE_FIND_SHIPS) {
@@ -805,6 +810,11 @@ void render(void)
 {
 	int i,j;
 	Rect r;
+	glClear(GL_COLOR_BUFFER_BIT);
+	if(credits_state){
+		credits.showPage(xres, yres);
+		return;
+	}
 	//--------------------------------------------------------
 	//This code is repeated several times in this program, so
 	//it can be made more generic and cleaner with some work.
