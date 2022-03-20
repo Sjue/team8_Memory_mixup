@@ -14,4 +14,8 @@ void Credits::showPage(int xres, int yres)
 	r.bot = yres -50;
 	r.left = xres/2;
 	ggprint16(&r, 0, 0x0088aaff, "Credits");
+	r.bot = yres - 200;
+	r.left = xres/2;
+	ggprint16(&r, 0, 0x00fe4164, "Creators: Sydney Jue, Spencer Ledwell, Sunol Rasapatirat, Antonio Milin");
+
 }
