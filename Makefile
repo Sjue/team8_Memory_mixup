@@ -6,10 +6,13 @@ all: sjue.o bship
 sjue.o: sjue.cpp
 	g++ -c sjue.cpp -Wall
 
+sledwell.o : sledwell.cpp
+	g++ -c sledwell.cpp -Wall
+	
 bship: bship.o log.o
 	g++ bship.o log.o sjue.o libggfonts.a $(LFLAGS) -o bship
 
-bship.o: bship.cpp 
+bship.o: bship.cpp
 	g++ -c bship.cpp
 
 log.o: log.cpp
@@ -18,4 +21,3 @@ log.o: log.cpp
 clean:
 	rm -f bship
 	rm -f *.o
-
