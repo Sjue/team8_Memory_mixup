@@ -1,12 +1,13 @@
 //Antonio Milin
-#include <stdio.h>
 
-using namespace std;
-
-int main() {
-    //printing my name
-    cout << "Antonio Milin" << endl;
-    cout << "Class: CMPS 3350 - Software Engineering" << endl;
-    
-    return 0;
+//Midterm function
+int amilin(int n)
+{
+    //If fucntion returns 1 it means it is a positive number
+    int count = 0;
+    if (n >= 0) {
+        cout << "The given argument is an positive number.\n";
+        count = 1;
+    }
+    return count;
 }
