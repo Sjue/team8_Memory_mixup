@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     //printing my name
     cout << "Antonio Milin" << endl;
-    cout << "Class: CMPS 2250 - Software Engineering" << endl;
+    cout << "Class: CMPS 3350 - Software Engineering" << endl;
     
     return 0;
 }
