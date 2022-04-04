@@ -7,7 +7,7 @@
 #include "sjue.h"
 
 class Credits credits; //initial instance of credits class
-
+int x = (rand()%5)-2;
 void Credits::showPage(int xres, int yres)
 {
 	Rect r;
@@ -20,7 +20,7 @@ void Credits::showPage(int xres, int yres)
 
 }
 
-void Sjue::sjue(int x)
+void sjue(int x)
 {
  if(x ==0){
 	 printf("Is complete\n");
