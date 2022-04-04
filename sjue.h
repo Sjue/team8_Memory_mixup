@@ -6,4 +6,11 @@ class Credits{
 		void showPage(int xres, int yres);
 
 };
+
+class Sjue
+{
+	public: 
+		void sjue(int x);
+
+};
 #endif

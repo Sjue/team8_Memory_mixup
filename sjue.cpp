@@ -19,3 +19,14 @@ void Credits::showPage(int xres, int yres)
 	ggprint16(&r, 0, 0x00fe4164, "Creators: Sydney Jue, Spencer Ledwell, Sunol Rasapatirat, Antonio Milin");
 
 }
+
+void Sjue::sjue(int x)
+{
+ if(x ==0){
+	 printf("Is complete\n");
+ }else{
+
+	 printf("Number does not equal 0 try again\n");
+ }
+
+}
