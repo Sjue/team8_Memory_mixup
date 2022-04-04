@@ -6,4 +6,5 @@ class Credits{
 		void showPage(int xres, int yres);
 
 };
+
 #endif
