@@ -124,7 +124,7 @@ public:
 	}
 };
 //Image img[3] = {"./x.ppm", "./explosion.ppm", "./bship.ppm"};
-Image img[3] = {"./x.png", "./explosion.png", "./background.png"};
+Image img[3] = {"./banana.png", "./explosion.png", "./background.png"};
 //
 //
 GLuint xTexture;
