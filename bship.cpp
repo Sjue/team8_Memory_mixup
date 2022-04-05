@@ -124,7 +124,7 @@ public:
 	}
 };
 //Image img[3] = {"./x.ppm", "./explosion.ppm", "./bship.ppm"};
-Image img[3] = {"./x.png", "./explosion.png", "./bship.png"};
+Image img[3] = {"./x.png", "./explosion.png", "./background.png"};
 //
 //
 GLuint xTexture;
@@ -986,14 +986,14 @@ void render(void)
 	r.center = 0;
 	switch(gamemode) {
 		case MODE_READY:
-			ggprint16(&r, 0, 0x00ffffff, "Press F2 to place ships!");
+			ggprint16(&r, 0, 0x00ffffff, "Press F2 to place items!");
 			break;
 		case MODE_PLACE_SHIPS:
 			ggprint16(&r, 0, 0x00ffffff,
-				"Press F2 when finished placing ships.");
+				"Press F2 when finished placing items.");
 			break;
 		case MODE_FIND_SHIPS:
-			ggprint16(&r, 0, 0x00ffffff, "Search for ships on grid!");
+			ggprint16(&r, 0, 0x00ffffff, "Search for items on the shelf!");
 			break;
 		case MODE_GAMEOVER:
 			ggprint16(&r, 0, 0x00ffffff, "Game over!");
