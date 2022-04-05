@@ -5,15 +5,15 @@ all: sjue.o amilin.o bship
 
 amilin.o: amilin.cpp
 	g++ -c amilin.cpp -Wall
-	
+
 sjue.o: sjue.cpp
 	g++ -c sjue.cpp -Wall
 
 sledwell.o : sledwell.cpp
 	g++ -c sledwell.cpp -Wall
-	
+
 bship: bship.o log.o
-	g++ bship.o log.o sjue.o libggfonts.a $(LFLAGS) -o bship
+	g++ bship.o log.o sjue.o sledwell.o amilin.o libggfonts.a $(LFLAGS) -o bship
 
 bship.o: bship.cpp
 	g++ -c bship.cpp
