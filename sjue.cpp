@@ -5,6 +5,7 @@
 #include "fonts.h"
 #include <X11/Xlib.h>
 #include "sjue.h"
+#include <stdlib.h>
 
 class Credits credits; //initial instance of credits class
 int x = (rand()%5)-2;
