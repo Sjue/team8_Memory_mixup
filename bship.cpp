@@ -142,9 +142,9 @@ typedef struct t_ship {
 	int hv;
 } Ship;
 Ship ship[MAXSHIPS];
-int nships=0;
-int nshipssunk=0;
-int nbombs=0;
+int nitems=0;
+int nitems_guessed=0;
+int nitems=0;
 //
 //modes:
 //0 game is at rest
@@ -436,7 +436,7 @@ void reset_grids(void)
 		}
 	}
 	gamemode = MODE_READY;
-	nships = 0;
+	nitems = 0;
 }
 
 void init(void)
@@ -528,8 +528,8 @@ void check_keys(XEvent *e)
 		case XK_F2:
 			gamemode++;
 			if (gamemode == MODE_FIND_SHIPS) {
-				nshipssunk = 0;
-				nbombs = 10;
+				nitems_guessed = 0;
+				nitems = 10;
 			}
 			if (gamemode > MODE_GAMEOVER) {
 				gamemode = MODE_READY;
@@ -575,13 +575,13 @@ void mouse_click(int ibutton, int action, int x, int y)
 							if (con != 0) {
 								//same ship continued
 								grid1[i][j].status=1;
-								grid1[i][j].shipno=nships+1;
+								grid1[i][j].shipno=nitems+1;
 							} else {
-								if (nships < MAXSHIPS) {
+								if (nitems < MAXSHIPS) {
 									//new ship being placed!
 									grid1[i][j].status = 1;
-									nships++;
-									grid1[i][j].shipno = nships+1;
+									nitems++;
+									grid1[i][j].shipno = nitems+1;
 								}
 							}
 						}
@@ -598,22 +598,22 @@ void mouse_click(int ibutton, int action, int x, int y)
 						y >= cent[1]-qsize &&
 						y <= cent[1]+qsize) {
 						if (ibutton == 1) {
-							nbombs--;
+							nitems--;
 							if (grid1[i][j].status) {
 								int s = grid1[i][j].shipno;
 								grid2[i][j].status = 2;
 								{
 									//is this ship sunk?
 									if (check_for_sink(s)) {
-										nshipssunk++;
-										nbombs += 5;
-										if (nshipssunk >= nships) {
+										nitems_guessed++;
+										nitems += 5;
+										if (nitems_guessed >= nitems) {
 											gamemode = MODE_GAMEOVER;
 										}
 									}
 								}
 							}
-							if (nbombs <= 0) {
+							if (nitems <= 0) {
 								gamemode = MODE_GAMEOVER;
 							}
 						}
@@ -746,7 +746,7 @@ int check_connecting_quad(int i, int j, int gridno)
 	int t = i-1;
 	int r = j+1;
 	int b = i+1;
-	int s = nships+1;
+	int s = nitems+1;
 	if (gridno==1) {
 		//if (grid1[t][l].shipno==s) return 1;
 		if (grid1[t][j].shipno==s) return 1;
@@ -1002,7 +1002,7 @@ void render(void)
 	r.left = 4;
 	r.bot  = 160;
 	r.center = 0;
-	ggprint16(&r, 20, 0x00ffff00, "nships placed: %i",nships);
-	ggprint16(&r, 20, 0x00ffff00, "nships sunk: %i",nshipssunk);
-	ggprint16(&r, 20, 0x00ffff00, "nbombs left: %i",nbombs);
+	ggprint16(&r, 20, 0x00ffff00, "Items placed: %i",nitems);
+	ggprint16(&r, 20, 0x00ffff00, "Items guessed: %i",nitems_guessed);
+	ggprint16(&r, 20, 0x00ffff00, "Items left: %i",nitems);
 }
