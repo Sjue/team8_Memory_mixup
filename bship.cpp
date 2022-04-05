@@ -144,7 +144,7 @@ typedef struct t_ship {
 Ship ship[MAXSHIPS];
 int nitems=0;
 int nitems_guessed=0;
-int nitems=0;
+int nitems_left=0;
 //
 //modes:
 //0 game is at rest
@@ -529,7 +529,7 @@ void check_keys(XEvent *e)
 			gamemode++;
 			if (gamemode == MODE_FIND_SHIPS) {
 				nitems_guessed = 0;
-				nitems = 10;
+				nitems_left = 10;
 			}
 			if (gamemode > MODE_GAMEOVER) {
 				gamemode = MODE_READY;
@@ -598,7 +598,7 @@ void mouse_click(int ibutton, int action, int x, int y)
 						y >= cent[1]-qsize &&
 						y <= cent[1]+qsize) {
 						if (ibutton == 1) {
-							nitems--;
+							nitems_left--;
 							if (grid1[i][j].status) {
 								int s = grid1[i][j].shipno;
 								grid2[i][j].status = 2;
@@ -606,14 +606,14 @@ void mouse_click(int ibutton, int action, int x, int y)
 									//is this ship sunk?
 									if (check_for_sink(s)) {
 										nitems_guessed++;
-										nitems += 5;
+										nitems_left += 5;
 										if (nitems_guessed >= nitems) {
 											gamemode = MODE_GAMEOVER;
 										}
 									}
 								}
 							}
-							if (nitems <= 0) {
+							if (nitems_left <= 0) {
 								gamemode = MODE_GAMEOVER;
 							}
 						}
@@ -1004,5 +1004,5 @@ void render(void)
 	r.center = 0;
 	ggprint16(&r, 20, 0x00ffff00, "Items placed: %i",nitems);
 	ggprint16(&r, 20, 0x00ffff00, "Items guessed: %i",nitems_guessed);
-	ggprint16(&r, 20, 0x00ffff00, "Items left: %i",nitems);
+	ggprint16(&r, 20, 0x00ffff00, "Items left: %i",nitems_left);
 }
