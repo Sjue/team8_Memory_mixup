@@ -1,7 +1,7 @@
 //Antonio Milin
 
 //Midterm function
-int amilin(int n)
+int amilin (int n)
 {
     //If fucntion returns 1 it means it is a positive number
     int count = 0;
