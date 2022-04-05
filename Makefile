@@ -1,8 +1,11 @@
 CFLAGS = -pthread
 LFLAGS = -lrt -lX11 -lGLU -lGL -lm #-lXrandr
 
-all: sjue.o bship
+all: sjue.o amilin.o bship
 
+amilin.o: amilin.cpp
+	g++ -c amilin.cpp -Wall
+	
 sjue.o: sjue.cpp
 	g++ -c sjue.cpp -Wall
 
