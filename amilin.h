@@ -1,5 +1,5 @@
-#ifndef _LOG_H_
-#define _LOG_H_
+#ifndef _AMILIN_H_
+#define _AMILIN_H_
 
 extern int amilin(int n);
 
