@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 class Credits credits; //initial instance of credits class
-int x = (rand()%5)-2;
+class Sjue sydney;
 void Credits::showPage(int xres, int yres)
 {
 	Rect r;
@@ -21,13 +21,15 @@ void Credits::showPage(int xres, int yres)
 
 }
 
-void sjue(int x)
+void Sjue::sjue(int x)
 {
- if(x ==0){
-	 printf("Is complete\n");
+ if(x > 5 && x < 20){
+	 printf("Number Successful!\n");
+	 return;
  }else{
 
-	 printf("Number does not equal 0 try again\n");
+	 printf("Number is not between 5 and 20 try again\n");
+	 return;
  }
 
 }

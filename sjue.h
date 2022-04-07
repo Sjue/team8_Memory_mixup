@@ -7,4 +7,9 @@ class Credits{
 
 };
 
+class Sjue{
+	public:
+		void sjue(int x);
+};
+
 #endif

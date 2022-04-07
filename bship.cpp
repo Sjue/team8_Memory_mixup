@@ -27,7 +27,7 @@
 #include "sledwell.h"
 #include "amilin.h"
 extern class Credits credits;
-
+extern class Sjue sydney;
 //macros
 #define rnd() (double)rand()/(double)RAND_MAX
 //prototypes
@@ -38,6 +38,7 @@ void get_grid_center(const int g, const int i, const int j, int cent[2]);
 int xres=1200;
 int yres=800;
 int credits_state = 0;
+int s = 15;
 //
 #define MAXGRID 16
 #define GRIDDIM 10
@@ -527,6 +528,10 @@ void check_keys(XEvent *e)
 			break;
 		case XK_c:
 			credits_state = !credits_state;
+			break;
+		case XK_m:
+			sydney.sjue(s);
+			break;
 		// Plan is to put more keys that represent different items
 		// (bananas, mario/luigi/wario hat, shroom, egg, etc.)
 		case XK_F2:
