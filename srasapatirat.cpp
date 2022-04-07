@@ -5,7 +5,7 @@ void srasapatirat (int n) {
 
         printf("number is %i", n);
 
-   return 0;
+   return;
 }
 
 //int main () {
