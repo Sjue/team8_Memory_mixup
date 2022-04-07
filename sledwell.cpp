@@ -13,6 +13,9 @@ return 0;
 
 bool sledwell(int n)
 {
-    if (n%2) return 0;
-    return 1;
+    if (n > 50) {
+      return 1;
+    } else {
+      return 0;
+    }
 }

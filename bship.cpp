@@ -24,6 +24,7 @@
 #include "log.h"
 #include "fonts.h"
 #include "sjue.h"
+#include "sledwell.h"
 extern class Credits credits;
 
 //macros
@@ -941,7 +942,12 @@ void render(void)
 		//
 		r.bot  = yres-50;
 		r.left = xres/2;
+		int numtest = 55;
+		if (sledwell(numtest)) {
+			ggprint16(&r, 0, 0x0088aa88, "MESSY MEMORY");
+		} else {
 		ggprint16(&r, 0, 0x0088aaff, "MESSY MEMORY");
+		}
 	}
 	//
 	//draw all buttons
