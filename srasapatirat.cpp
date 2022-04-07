@@ -1,15 +1,9 @@
 //sunol rasapatirath
 #include <stdio.h>
 
-int srasapatirat () {
+int srasapatirat (int n) {
 
-    char name[20];
-    printf("enter name to print");
-    if (scanf("%s", name)) {
-        printf("name accepted %s", name);
-    }else{
-        printf("not accepted %s", name);
-    }
+        printf("number is %i", num);
 
    return 0;
 }
