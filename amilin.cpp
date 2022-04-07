@@ -3,13 +3,9 @@
 //Midterm function
 int amilin (int n)
 {
-    // Flag for checking the integer
-    // 0 = negative
-    // 1 = positive
+    //This function return n/4 value for xres in bship.cpp
     int flag = 0;
-
-    if (n > 0) {
-        flag = 1;
-    }
+    flag = n/4;
+    
     return flag;
 }
