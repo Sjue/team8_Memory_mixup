@@ -942,11 +942,11 @@ void render(void)
 		//
 		r.bot  = yres-50;
 		r.left = xres/2;
-		int numtest = 55;
+		int numtest = rand() % 100;
 		if (sledwell(numtest)) {
-			ggprint16(&r, 0, 0x0088aa88, "MESSY MEMORY");
+			ggprint16(&r, 0, 0x00ff0099, "MESSY MEMORY");
 		} else {
-		ggprint16(&r, 0, 0x0088aaff, "MESSY MEMORY");
+		ggprint16(&r, 0, 0x001aff03, "MESSY MEMORY");
 		}
 	}
 	//
