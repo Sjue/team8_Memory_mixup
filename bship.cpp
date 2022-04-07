@@ -609,7 +609,9 @@ void mouse_click(int ibutton, int action, int x, int y)
 						x <= cent[0]+qsize &&
 						y >= cent[1]-qsize &&
 						y <= cent[1]+qsize) {
-						if (ibutton == 1) {
+						//if(ibutton == 1)
+						int test = amilin(ibutton);
+						if (test == 1) {
 							nitems_left--;
 							if (grid1[i][j].status) {
 								int s = grid1[i][j].shipno;
