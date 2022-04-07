@@ -792,6 +792,7 @@ void get_grid_center(const int g, const int i, const int j, int cent[2])
 	//This determines the center of each grid.
 	switch(g) {
 		case 1:
+			//s0 = amilin(xres);
 			s0 = xres/4;
 			break;
 		case 2:
