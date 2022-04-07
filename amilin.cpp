@@ -5,7 +5,7 @@ int amilin (int n)
 {
 	int flag = 0;
 	
-	if (flag < 0) {
+	if (n < 0) {
 		flag = 0;
 	}
 	if (n == 1) {
