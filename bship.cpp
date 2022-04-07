@@ -360,7 +360,7 @@ void init_opengl(void)
 {
 	int h,w;
 	//OpenGL initialization
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 	glClearDepth(1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glEnable(GL_COLOR_MATERIAL);
