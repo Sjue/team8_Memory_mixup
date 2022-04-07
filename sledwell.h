@@ -1,5 +1,5 @@
-#ifndef _LOG_H_
-#define _LOG_H_
+#ifndef _SLEDWELL_H_
+#define _SLEDWELL_H_
 
 extern bool sledwell(int n);
 
