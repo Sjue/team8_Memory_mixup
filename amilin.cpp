@@ -3,12 +3,13 @@
 //Midterm function
 int amilin (int n)
 {
-    int count = 0;
+    // Flag for checking the integer
+    // 0 = negative
+    // 1 = positive
+    int flag = 0;
 
     if (n > 0) {
-        cout << "Number is a positive integer.\n";
-
-        count = 1;
+        flag = 1;
     }
-    return count;
+    return flag;
 }
