@@ -26,6 +26,7 @@
 #include "sjue.h"
 #include "sledwell.h"
 #include "amilin.h"
+#include "srasapatirat.h"
 extern class Credits credits;
 extern class Sjue sydney;
 //macros
