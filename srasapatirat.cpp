@@ -1,7 +1,7 @@
 //sunol rasapatirath
 #include <stdio.h>
 
-int srasapatirat (int n) {
+void srasapatirat (int n) {
 
         printf("number is %i", n);
 
