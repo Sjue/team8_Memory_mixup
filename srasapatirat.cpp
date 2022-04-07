@@ -3,7 +3,7 @@
 
 int srasapatirat (int n) {
 
-        printf("number is %i", num);
+        printf("number is %i", n);
 
    return 0;
 }
