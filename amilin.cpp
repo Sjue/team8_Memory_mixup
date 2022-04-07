@@ -3,9 +3,9 @@
 //Midterm function
 int amilin (int n)
 {
-    //This function return n/4 value for xres in bship.cpp
-    int flag = 0;
-    flag = n/4;
-    
-    return flag;
+    int shift = 0;
+   if (n == XK_Shift_L || n == XK_Shift_R) {
+			shift=1;
+   }
+    return shift;
 }
