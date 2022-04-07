@@ -24,7 +24,7 @@
 #include "log.h"
 #include "fonts.h"
 #include "sjue.h"
-#include "sledwell.h"
+#include "amilin.h"
 extern class Credits credits;
 
 //macros
@@ -526,6 +526,8 @@ void check_keys(XEvent *e)
 			break;
 		case XK_c:
 			credits_state = !credits_state;
+		// Plan is to put more keys that represent different items
+		// (bananas, mario/luigi/wario hat, shroom, egg, etc.)
 		case XK_F2:
 			gamemode++;
 			if (gamemode == MODE_FIND_SHIPS) {
@@ -942,12 +944,7 @@ void render(void)
 		//
 		r.bot  = yres-50;
 		r.left = xres/2;
-		int numtest = rand() % 100;
-		if (sledwell(numtest)) {
-			ggprint16(&r, 0, 0x00ff0099, "MESSY MEMORY");
-		} else {
-		ggprint16(&r, 0, 0x001aff03, "MESSY MEMORY");
-		}
+		ggprint16(&r, 0, 0x0088aaff, "MESSY MEMORY");
 	}
 	//
 	//draw all buttons
