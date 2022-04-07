@@ -1,7 +1,4 @@
 //Antonio Milin
-#include <iostream>
-
-using namespace std;
 
 //Midterm function
 int amilin (int n)
