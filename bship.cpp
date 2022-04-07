@@ -786,6 +786,8 @@ int check_for_sink(int s)
 			}
 		}
 	}
+    //attempt to add func
+    srasapatirat(sunk);
 	return sunk;
 }
 
