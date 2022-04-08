@@ -518,9 +518,9 @@ void check_keys(XEvent *e)
 		//shift = amilin(key);
 		return;
 		if (key == XK_Shift_L || key == XK_Shift_R) {
-			//shift=1;
-			//return;
-		//}
+			shift=1;
+			return;
+		}
 	} else {
 		return;
 	}
