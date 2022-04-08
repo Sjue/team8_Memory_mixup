@@ -516,7 +516,7 @@ void check_keys(XEvent *e)
 	}
 	if (e->type == KeyPress) {
 		//shift = amilin(key);
-		return;
+		//return;
 		if (key == XK_Shift_L || key == XK_Shift_R) {
 			shift=1;
 			return;
