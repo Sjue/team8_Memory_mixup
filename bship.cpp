@@ -1078,10 +1078,10 @@ void render(void)
 			glBindTexture(GL_TEXTURE_2D, titleTexture);
 			glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
 			glBegin(GL_QUADS);
-				glTexCoord2f(0.0f, 1.0f);  glVertex2i(xres/2-128,    yres-228);
-				glTexCoord2f(0.0f, 0.0f); glVertex2i(xres/2-128,    yres-100);
-				glTexCoord2f(1.0f, 0.0f); glVertex2i(xres/2+128, yres-100);
-				glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres/2+128, yres-228);
+				glTexCoord2f(0.0f, 1.0f);  glVertex2i(xres/2-128,    yres-178);
+				glTexCoord2f(0.0f, 0.0f); glVertex2i(xres/2-128,    yres-50);
+				glTexCoord2f(1.0f, 0.0f); glVertex2i(xres/2+128, yres-50);
+				glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres/2+128, yres-178);
 			glEnd();
 			glBindTexture(GL_TEXTURE_2D, 0);
 			ggprint16(&r, 0, 0x00ffffff, "Press F2 to place items!");
