@@ -895,6 +895,8 @@ void render(void)
 	glBindTexture(GL_TEXTURE_2D, 0);
 
 	//show title Messy Memory
+	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+	glEnable(GL_BLEND);
 	glBindTexture(GL_TEXTURE_2D, titleTexture);
 	glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
 	glBegin(GL_QUADS);
@@ -904,6 +906,7 @@ void render(void)
 		glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres/2+128, yres-228);
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, 0);
+	glDisable(GL_BLEND);
 	//
 	//draw the game
 	//
