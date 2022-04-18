@@ -19,3 +19,15 @@ bool sledwell(int n)
       return 0;
     }
 }
+
+void sl_drawTitle()
+{
+  glColor3f(1.0f, 1.0f, 1.0f);
+  glBegin(GL_QUADS);
+    glTexCoord2f(0.0f, 1.0f);  glVertex2i(1200/2-128,    800-228);
+    glTexCoord2f(0.0f, 0.0f); glVertex2i(1200/2-128,    800-100);
+    glTexCoord2f(1.0f, 0.0f); glVertex2i(1200/2+128, 800-100);
+    glTexCoord2f(1.0f, 1.0f);  glVertex2i(1200/2+128, 800-228);
+  glEnd();
+  glBindTexture(GL_TEXTURE_2D, 0);
+}
