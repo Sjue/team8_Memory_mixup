@@ -610,6 +610,7 @@ void mouse_click(int ibutton, int action, int x, int y)
 						y >= cent[1]-qsize &&
 						y <= cent[1]+qsize) {
 						//if(ibutton == 1)
+						// My code 
 						int test = amilin(ibutton);
 						if (test == 1) {
 							nitems_left--;
@@ -668,6 +669,12 @@ void check_mouse(XEvent *e)
 	}
 	if (e->type == ButtonPress) {
 		if (e->xbutton.button==1) {
+			//Left button is down
+			lbutton=1;
+		}
+		//trying something
+		
+		if (e->xbutton.button==2) {
 			//Left button is down
 			lbutton=1;
 		}
