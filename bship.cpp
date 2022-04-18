@@ -28,7 +28,7 @@
 #include "amilin.h"
 #include "srasapatirat.h"
 extern class Credits credits;
-extern class Sjue sydney;
+//extern class Sjue sydney;
 //macros
 #define rnd() (double)rand()/(double)RAND_MAX
 //prototypes
@@ -576,7 +576,10 @@ void check_keys(XEvent *e)
 			credits_state = !credits_state;
 			break;
 		case XK_m:
-			sydney.sjue(s);
+		//---------------------------------
+		//midterm function doesn't add anything to project
+			//	sydney.sjue(s);
+		//---------------------------------
 			break;
 		// Plan is to put more keys that represent different items
 		// (bananas, mario/luigi/wario hat, shroom, egg, etc.)

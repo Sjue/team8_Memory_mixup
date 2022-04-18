@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 class Credits credits; //initial instance of credits class
-class Sjue sydney;
+//class Sjue sydney;
 void Credits::showPage(int xres, int yres)
 {
 	Rect r;
@@ -17,11 +17,14 @@ void Credits::showPage(int xres, int yres)
 	ggprint16(&r, 0, 0x0088aaff, "Credits");
 	r.bot = yres - 200;
 	r.left = xres/2;
-	ggprint16(&r, 0, 0x00fe4164, "Creators: Sydney Jue, Spencer Ledwell, Sunol Rasapatirat, Antonio Milin");
+	ggprint16(&r, 0, 0x00fe4164, "Creators: Sydney Jue, Spencer Ledwell"); 
+	r.bot = yres - 250;
+	r.left = xres/2;
+	ggprint16(&r,0, 0x00fe4146,"Sunol Rasapatirat, Antonio Milin");
 
 }
 
-void Sjue::sjue(int x)
+/*void Sjue::sjue(int x)
 {
  if(x > 5 && x < 20){
 	 printf("Number Successful!\n");
@@ -32,4 +35,4 @@ void Sjue::sjue(int x)
 	 return;
  }
 
-}
+}*/

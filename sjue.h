@@ -7,9 +7,10 @@ class Credits{
 
 };
 
-class Sjue{
+/*class Sjue{
 	public:
 		void sjue(int x);
 };
+*/
 
 #endif
