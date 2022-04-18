@@ -895,7 +895,7 @@ void render(void)
 	glBindTexture(GL_TEXTURE_2D, 0);
 
 	//show title Messy Memory
-
+	/*
 	glBindTexture(GL_TEXTURE_2D, titleTexture);
 	glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
 	glBegin(GL_QUADS);
@@ -905,6 +905,7 @@ void render(void)
 		glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres/2+128, yres-228);
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, 0);
+	*/
 
 	//
 	//draw the game
@@ -1042,6 +1043,15 @@ void render(void)
 	r.center = 0;
 	switch(gamemode) {
 		case MODE_READY:
+			glBindTexture(GL_TEXTURE_2D, titleTexture);
+			glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
+			glBegin(GL_QUADS);
+				glTexCoord2f(0.0f, 1.0f);  glVertex2i(xres/2-128,    yres-228);
+				glTexCoord2f(0.0f, 0.0f); glVertex2i(xres/2-128,    yres-100);
+				glTexCoord2f(1.0f, 0.0f); glVertex2i(xres/2+128, yres-100);
+				glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres/2+128, yres-228);
+			glEnd();
+			glBindTexture(GL_TEXTURE_2D, 0);
 			ggprint16(&r, 0, 0x00ffffff, "Press F2 to place items!");
 			break;
 		case MODE_PLACE_SHIPS:
