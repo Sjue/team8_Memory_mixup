@@ -474,7 +474,7 @@ void init(void)
 	//size and position
 	button[nbuttons].r.width = 200;
 	button[nbuttons].r.height = 50;
-	button[nbuttons].r.left = 10;
+	button[nbuttons].r.left = xres/2 - buttons[nbuttons].r.width/2;
 	button[nbuttons].r.bot = 10;
 	button[nbuttons].r.right =
 		button[nbuttons].r.left + button[nbuttons].r.width;
@@ -483,7 +483,7 @@ void init(void)
 		(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
 	button[nbuttons].r.centery =
 		(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
-	strcpy(button[nbuttons].text, "Quit");
+	strcpy(button[nbuttons].text, "Exit Game");
 	button[nbuttons].down = 0;
 	button[nbuttons].click = 0;
 	button[nbuttons].color[0] = 0.4f;
@@ -500,7 +500,7 @@ void init(void)
 	button[nbuttons].r.width = 200;
 	button[nbuttons].r.height = 100;
 	button[nbuttons].r.left = xres/2 - button[nbuttons].r.width/2;
-	button[nbuttons].r.bot = 50;
+	button[nbuttons].r.bot = 200;
 	button[nbuttons].r.right =
 		button[nbuttons].r.left + button[nbuttons].r.width;
 	button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
@@ -508,7 +508,7 @@ void init(void)
 		(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
 	button[nbuttons].r.centery =
 		(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
-	strcpy(button[nbuttons].text, "Reset Grids");
+	strcpy(button[nbuttons].text, "Volume Toggle");
 	button[nbuttons].down = 0;
 	button[nbuttons].click = 0;
 	button[nbuttons].color[0] = 0.4f;
