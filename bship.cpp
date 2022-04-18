@@ -415,7 +415,6 @@ void init_opengl(void)
 								GL_RGB, GL_UNSIGNED_BYTE, explosionImage->data);
 	//-------------------------------------------------------------------------
 	//bship
-	glPixelStorei (GL_UNPACK_ALIGNEMNT, 1);
 	w = bshipImage->width;
 	h = bshipImage->height;
 	glBindTexture(GL_TEXTURE_2D, bshipTexture);
