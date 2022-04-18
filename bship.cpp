@@ -925,7 +925,8 @@ void render(void)
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, 0);
 
-	//show title Messy Memory
+	//show title Messy Memory - MOVED TITLE TO GAME STATE TO ONLY SHOW ON START
+	//MENU SCREEN
 	/*
 	glBindTexture(GL_TEXTURE_2D, titleTexture);
 	glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
