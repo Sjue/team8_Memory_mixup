@@ -610,7 +610,7 @@ void mouse_click(int ibutton, int action, int x, int y)
 						y >= cent[1]-qsize &&
 						y <= cent[1]+qsize) {
 						//if(ibutton == 1)
-						// My code 
+						// My code
 						int test = amilin(ibutton);
 						if (test == 1) {
 							nitems_left--;
@@ -866,14 +866,14 @@ void render(void)
 	//
 	//show screen background...
 	glBindTexture(GL_TEXTURE_2D, bshipTexture);
-	
+
 	//figuring out what this does
 	// -> glColor3f(0.2f, 0.2f, 0.6f);
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_QUADS);
 		glTexCoord2f(0.0f, 1.0f);  glVertex2i(0,    yres);
-		glTexCoord2f(0.0f, 0.25f); glVertex2i(0,    0);
-		glTexCoord2f(1.0f, 0.25f); glVertex2i(xres, 0);
+		glTexCoord2f(0.0f, 0.0f); glVertex2i(0,    0);
+		glTexCoord2f(1.0f, 0.0f); glVertex2i(xres, 0);
 		glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres, yres);
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, 0);
