@@ -866,7 +866,10 @@ void render(void)
 	//
 	//show screen background...
 	glBindTexture(GL_TEXTURE_2D, bshipTexture);
-	glColor3f(0.2f, 0.2f, 0.6f);
+	
+	//figuring out what this does
+	// -> glColor3f(0.2f, 0.2f, 0.6f);
+	glColor3f(0.0f, 0.0f, 0.0f);
 	glBegin(GL_QUADS);
 		glTexCoord2f(0.0f, 1.0f);  glVertex2i(0,    yres);
 		glTexCoord2f(0.0f, 0.25f); glVertex2i(0,    0);
