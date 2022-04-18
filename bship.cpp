@@ -525,9 +525,9 @@ void init(void)
 	//Reset button
 	//size and position
 	button[nbuttons].r.width = 200;
-	button[nbuttons].r.height = 100;
+	button[nbuttons].r.height = 50;
 	button[nbuttons].r.left = xres/2 - button[nbuttons].r.width/2;
-	button[nbuttons].r.bot = 400;
+	button[nbuttons].r.bot = 130;
 	button[nbuttons].r.right =
 		button[nbuttons].r.left + button[nbuttons].r.width;
 	button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
