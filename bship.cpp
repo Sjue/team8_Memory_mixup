@@ -672,12 +672,7 @@ void check_mouse(XEvent *e)
 			//Left button is down
 			lbutton=1;
 		}
-		//trying something
-		
-		if (e->xbutton.button==2) {
-			//Left button is down
-			lbutton=1;
-		}
+		//didnt work
 		if (e->xbutton.button==3) {
 			//Right button is down
 			rbutton=1;
