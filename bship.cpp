@@ -415,6 +415,7 @@ void init_opengl(void)
 								GL_RGB, GL_UNSIGNED_BYTE, explosionImage->data);
 	//-------------------------------------------------------------------------
 	//bship
+	glPixelStorei (GL_UNPACK_ALIGNEMNT, 1);
 	w = bshipImage->width;
 	h = bshipImage->height;
 	glBindTexture(GL_TEXTURE_2D, bshipTexture);
@@ -867,9 +868,9 @@ void render(void)
 	glColor3f(0.2f, 0.2f, 0.6f);
 	glBegin(GL_QUADS);
 		glTexCoord2f(0.0f, 0.0f);  glVertex2i(0,    0);
-		glTexCoord2f(0.0f, 1.0f); glVertex2i(yres,    0);
-		glTexCoord2f(1.0f, 1.0f); glVertex2i(yres, xres);
-		glTexCoord2f(1.0f, 0.0f);  glVertex2i(0, xres);
+		glTexCoord2f(0.0f, 1.0f); glVertex2i(0,    yres);
+		glTexCoord2f(1.0f, 0.0f); glVertex2i(xres, 0);
+		glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres, yres);
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, 0);
 	//
