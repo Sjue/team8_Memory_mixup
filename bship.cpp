@@ -901,7 +901,7 @@ void render(void)
 	// -> glColor3f(0.2f, 0.2f, 0.6f);
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_QUADS);
-		glTexCoord2f(0.0f, 1.0f);  glVertex2i(xres/2-128,    yres-228;
+		glTexCoord2f(0.0f, 1.0f);  glVertex2i(xres/2-128,    yres-228);
 		glTexCoord2f(0.0f, 0.0f); glVertex2i(xres/2-128,    yres-100);
 		glTexCoord2f(1.0f, 0.0f); glVertex2i(xres/2+128, yres-100);
 		glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres/2+128, yres-228);
