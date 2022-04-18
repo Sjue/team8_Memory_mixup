@@ -867,7 +867,7 @@ void render(void)
 	glColor3f(0.2f, 0.2f, 0.6f);
 	glBegin(GL_QUADS);
 		glTexCoord2f(0.0f, 1.0f);  glVertex2i(0,    0);
-		glTexCoord2f(0.0f, 0.25f); glVertex2i(0,    yres);
+		glTexCoord2f(0.0f, 1.0f); glVertex2i(0,    yres);
 		glTexCoord2f(1.0f, 0.25f); glVertex2i(xres, yres);
 		glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres, 0);
 	glEnd();
