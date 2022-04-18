@@ -1,6 +1,7 @@
 //Author: Spencer Ledwell
 //Date: 02/24/2022
 //CMPS3350: Group Project - My Source Code
+#include <GL/glx.h>
 
 bool sledwell(int n);
 
