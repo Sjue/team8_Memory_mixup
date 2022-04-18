@@ -474,7 +474,7 @@ void init(void)
 	//size and position
 	button[nbuttons].r.width = 200;
 	button[nbuttons].r.height = 50;
-	button[nbuttons].r.left = xres/2 - buttons[nbuttons].r.width/2;
+	button[nbuttons].r.left = xres/2 - button[nbuttons].r.width/2;
 	button[nbuttons].r.bot = 10;
 	button[nbuttons].r.right =
 		button[nbuttons].r.left + button[nbuttons].r.width;
