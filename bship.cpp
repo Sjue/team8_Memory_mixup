@@ -896,9 +896,6 @@ void render(void)
 
 	//show title Messy Memory
 	glBindTexture(GL_TEXTURE_2D, titleTexture);
-
-	//figuring out what this does
-	// -> glColor3f(0.2f, 0.2f, 0.6f);
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_QUADS);
 		glTexCoord2f(0.0f, 1.0f);  glVertex2i(xres/2-128,    yres-228);
@@ -989,8 +986,8 @@ void render(void)
 		ggprint16(&r, 0, color, "Grid #1");
 		r.left = xres/4*3;
 		ggprint16(&r, 0, color, "Grid #2");
-		//
-		r.bot  = yres-50;
+		//remove old title
+		/* r.bot  = yres-50;
 		r.left = xres/2;
 		int numtest = rand() % 100;
 		if (sledwell(numtest)) {
@@ -998,6 +995,7 @@ void render(void)
 		} else {
 		ggprint16(&r, 0, 0x001aff03, "MESSY MEMORY");
 		}
+		*/
 	}
 	//
 	//draw all buttons
