@@ -896,7 +896,7 @@ void render(void)
 
 	//show title Messy Memory
 	glBindTexture(GL_TEXTURE_2D, titleTexture);
-	glColor3f(1.0f, 1.0f, 1.0f);
+	glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
 	glBegin(GL_QUADS);
 		glTexCoord2f(0.0f, 1.0f);  glVertex2i(xres/2-128,    yres-228);
 		glTexCoord2f(0.0f, 0.0f); glVertex2i(xres/2-128,    yres-100);
