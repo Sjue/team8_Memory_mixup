@@ -128,15 +128,19 @@ public:
 	}
 };
 //Image img[3] = {"./x.ppm", "./explosion.ppm", "./bship.ppm"};
-Image img[3] = {"./banana.png", "./explosion.png", "./background.png"};
+Image img[4] = {"./banana.png", "./explosion.png", "./background.png",
+ 								"./title.png"};
 //
 //
 GLuint xTexture;
 GLuint explosionTexture;
 GLuint bshipTexture;
+GLuint titleTexture;
 Image *xImage = NULL;
 Image *explosionImage = NULL;
 Image *bshipImage = NULL;
+Image *titleImage = NULL;
+
 //
 #define MAXSHIPS 4
 typedef struct t_ship {
@@ -388,11 +392,13 @@ void init_opengl(void)
 	xImage          = &img[0];
 	explosionImage  = &img[1];
 	bshipImage      = &img[2];
+	titleImage 			= &img[3];
 	//
 	//allocate opengl texture identifiers
 	glGenTextures(1, &xTexture);
 	glGenTextures(1, &explosionTexture);
 	glGenTextures(1, &bshipTexture);
+	glGenTextures(1, &titleTexture);
 	//
 	//load textures into memory
 	//-------------------------------------------------------------------------
@@ -422,6 +428,16 @@ void init_opengl(void)
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
 	glTexImage2D(GL_TEXTURE_2D, 0, 3, w, h, 0,
 								GL_RGB, GL_UNSIGNED_BYTE, bshipImage->data);
+	//-------------------------------------------------------------------------
+	//-------------------------------------------------------------------------
+	//title
+	w = titleImage->width;
+	h = titleImage->height;
+	glBindTexture(GL_TEXTURE_2D, titleTexture);
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
+	glTexImage2D(GL_TEXTURE_2D, 0, 3, w, h, 0,
+								GL_RGB, GL_UNSIGNED_BYTE, titleImage->data);
 	//-------------------------------------------------------------------------
 	glBindTexture(GL_TEXTURE_2D, 0);
 	//printf("tex: %i %i\n",Htexture,Vtexture);S
@@ -875,6 +891,20 @@ void render(void)
 		glTexCoord2f(0.0f, 0.0f); glVertex2i(0,    0);
 		glTexCoord2f(1.0f, 0.0f); glVertex2i(xres, 0);
 		glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres, yres);
+	glEnd();
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	//show title Messy Memory
+	glBindTexture(GL_TEXTURE_2D, titleTexture);
+
+	//figuring out what this does
+	// -> glColor3f(0.2f, 0.2f, 0.6f);
+	glColor3f(1.0f, 1.0f, 1.0f);
+	glBegin(GL_QUADS);
+		glTexCoord2f(0.0f, 1.0f);  glVertex2i(xres/2-128,    yres-100);
+		glTexCoord2f(0.0f, 0.0f); glVertex2i(xres/2-128,    yres-228);
+		glTexCoord2f(1.0f, 0.0f); glVertex2i(xres/2+128, yres-228);
+		glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres/2+128, yres-100);
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, 0);
 	//
