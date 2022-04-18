@@ -519,6 +519,33 @@ void init(void)
 	button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
 	button[nbuttons].text_color = 0x00ffffff;
 	nbuttons++;
+
+	//Start Button
+	//size and position
+	//Reset button
+	//size and position
+	button[nbuttons].r.width = 200;
+	button[nbuttons].r.height = 100;
+	button[nbuttons].r.left = xres/2 - button[nbuttons].r.width/2;
+	button[nbuttons].r.bot = 50;
+	button[nbuttons].r.right =
+		button[nbuttons].r.left + button[nbuttons].r.width;
+	button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
+	button[nbuttons].r.centerx =
+		(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
+	button[nbuttons].r.centery =
+		(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
+	strcpy(button[nbuttons].text, "Start");
+	button[nbuttons].down = 0;
+	button[nbuttons].click = 0;
+	button[nbuttons].color[0] = 0.4f;
+	button[nbuttons].color[1] = 0.4f;
+	button[nbuttons].color[2] = 0.7f;
+	button[nbuttons].dcolor[0] = button[nbuttons].color[0] * 0.5f;
+	button[nbuttons].dcolor[1] = button[nbuttons].color[1] * 0.5f;
+	button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
+	button[nbuttons].text_color = 0x00ffffff;
+	nbuttons++;
 }
 
 void check_keys(XEvent *e)
