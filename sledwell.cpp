@@ -14,7 +14,7 @@ bool sledwell(int n);
 
 class Gamestate gamestate;
 
-void Gamestate::showPage(int xres, int yres)
+void Gamestate::printButtonGuide(int xres, int yres)
 {
 	Rect r;
 	r.bot = 20;
@@ -23,12 +23,6 @@ void Gamestate::showPage(int xres, int yres)
 }
 
 
-int myMain()
-{
-//Adding some changes to see how github works
-
-return 0;
-}
 
 bool sledwell(int n)
 {

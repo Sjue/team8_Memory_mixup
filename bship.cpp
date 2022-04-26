@@ -967,7 +967,7 @@ void render(void)
 	}
 
 	if(game_state){
-		gamestate.showPage(xres, yres);
+		gamestate.printButtonGuide(xres, yres);
 
 		return;
 	}

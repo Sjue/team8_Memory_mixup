@@ -3,7 +3,7 @@
 extern bool sledwell(int n);
 class Gamestate{
 	public:
-		void showPage(int xres, int yres);
+		void printButtonGuide(int xres, int yres);
 
 };
 
