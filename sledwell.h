@@ -1,5 +1,5 @@
-#ifndef _SLEDWELL_H_
-#define _SLEDWELL_H_
+#ifndef _sledwell_h_
+#define _sledwell_h_
 
 extern bool sledwell(int n);
 
