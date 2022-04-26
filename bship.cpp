@@ -457,7 +457,7 @@ void init_opengl(void)
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
 	glTexImage2D(GL_TEXTURE_2D, 0, 3, w, h, 0,
-								GL_RGB, GL_UNSIGNED_BYTE, mariohatImage->data)
+								GL_RGB, GL_UNSIGNED_BYTE, mariohatImage->data);
 
 
 	//-------------------------------------------------------------------------
@@ -468,7 +468,8 @@ void init_opengl(void)
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
 	glTexImage2D(GL_TEXTURE_2D, 0, 3, w, h, 0,
-								GL_RGB, GL_UNSIGNED_BYTE, luigihatImage->data)
+								GL_RGB, GL_UNSIGNED_BYTE, luigihatImage->data);
+								
 	glBindTexture(GL_TEXTURE_2D, 0);
 	//printf("tex: %i %i\n",Htexture,Vtexture);S
 }
