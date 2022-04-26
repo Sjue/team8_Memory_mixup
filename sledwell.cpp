@@ -18,7 +18,7 @@ void Gamestate::showPage(int xres, int yres)
 {
 	Rect r;
 	r.bot = 20;
-	r.left = width/2;
+	r.left = xres/2;
 	ggprint16(&r, 0, 0x00000000, "ESC - Main Menu");
 }
 
