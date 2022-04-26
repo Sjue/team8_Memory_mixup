@@ -28,7 +28,7 @@
 #include "amilin.h"
 #include "srasapatirat.h"
 extern class Credits credits;
-extern class Gamestate gamestate1;
+extern class Gamestate gamestate;
 //extern class Sjue sydney;
 //macros
 #define rnd() (double)rand()/(double)RAND_MAX
@@ -888,7 +888,7 @@ void render(void)
 		return;
 	}
 	if(game_state){
-		gamestate1.showPage(xres, yres);
+		gamestate.showPage(xres, yres);
 		return;
 	}
 	//--------------------------------------------------------

@@ -4,7 +4,8 @@
 
 bool sledwell(int n);
 
-class Gamestate gamestate1;
+class Gamestate gamestate;
+
 void Gamestate::showPage(int xres, int yres)
 {
 
