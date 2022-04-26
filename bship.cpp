@@ -484,7 +484,7 @@ void init(void)
 	//initialize buttons...
 	nbuttons=0;
 
-	if(game_state = 1) {
+	if(game_state == 1) {
 
 		button[nbuttons].r.width = 200;
 		button[nbuttons].r.height = 50;
