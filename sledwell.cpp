@@ -17,9 +17,9 @@ class Gamestate gamestate;
 void Gamestate::showPage(int xres, int yres)
 {
 	Rect r;
-	r.bot = 50;
-	r.left = 50;
-	ggprint16(&r, 0, 0x0088aaff, "ESC - Main Menu");
+	r.bot = 20;
+	r.left = width/2;
+	ggprint16(&r, 0, 0x00000000, "ESC - Main Menu");
 }
 
 
