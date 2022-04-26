@@ -891,7 +891,7 @@ void render(void)
 		return;
 	}
 	if(game_state){
-		gamestate.showPage(xres, yres);
+		gamestate.showPage(xres, yres, bshipTexture);
 		return;
 	}
 	//--------------------------------------------------------
