@@ -886,14 +886,18 @@ void render(void)
 	int i,j;
 	Rect r;
 	glClear(GL_COLOR_BUFFER_BIT);
-	if(credits_state){
+
+	//MOVED SO BACKGROUND IS GENERATED
+	/*if(credits_state){
 		credits.showPage(xres, yres);
 		return;
 	}
+
 	if(game_state){
-		gamestate.showPage(xres, yres, bshipTexture);
+		gamestate.showPage(xres, yres);
+
 		return;
-	}
+	}/*
 	//--------------------------------------------------------
 	//This code is repeated several times in this program, so
 	//it can be made more generic and cleaner with some work.
@@ -955,6 +959,18 @@ void render(void)
 	//
 	//draw the game
 	//
+
+	if(credits_state){
+		credits.showPage(xres, yres);
+		return;
+	}
+
+	if(game_state){
+		gamestate.showPage(xres, yres);
+
+		return;
+	}
+
 	if (gamemode != MODE_FIND_SHIPS) {
 		//draw grid #1
 		// ...each grid square is drawn

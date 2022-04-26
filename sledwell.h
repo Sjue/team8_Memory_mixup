@@ -5,7 +5,7 @@ extern bool sledwell(int n);
 
 class Gamestate{
 	public:
-		void showPage(int xres, int yres, GLuint bshipTexture);
+		void showPage(int xres, int yres);
 
 };
 

@@ -2,34 +2,15 @@
 //Date: 02/24/2022
 //CMPS3350: Group Project - My Source Code
 #include "sledwell.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <time.h>
-#include <math.h>
-#include <X11/Xlib.h>
-#include <X11/keysym.h>
 #include <GL/glx.h>
-#include "bship.cpp"
+
 
 bool sledwell(int n);
 
 class Gamestate gamestate;
 
-void Gamestate::showPage(int xres, int yres, GLuint bshipTexture)
+void Gamestate::showPage(int xres, int yres)
 {
-	//bind Background Texture again
-	glBindTexture(GL_TEXTURE_2D, bshipTexture);
-	glColor3f(1.0f, 1.0f, 1.0f);
-	glBegin(GL_QUADS);
-		glTexCoord2f(0.0f, 1.0f);  glVertex2i(0,    yres);
-		glTexCoord2f(0.0f, 0.0f); glVertex2i(0,    0);
-		glTexCoord2f(1.0f, 0.0f); glVertex2i(xres, 0);
-		glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres, yres);
-	glEnd();
-	glBindTexture(GL_TEXTURE_2D, 0);
 
 }
 
