@@ -585,6 +585,9 @@ void check_keys(XEvent *e)
 			break;
 		// Plan is to put more keys that represent different items
 		// (bananas, mario/luigi/wario hat, shroom, egg, etc.)
+		case XK_DEL;
+			game_state = 0;
+			break;
 		case XK_F2:
 			gamemode++;
 			if (gamemode == MODE_FIND_SHIPS) {
