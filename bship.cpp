@@ -897,7 +897,7 @@ void render(void)
 		gamestate.showPage(xres, yres);
 
 		return;
-	}/*
+	}*/
 	//--------------------------------------------------------
 	//This code is repeated several times in this program, so
 	//it can be made more generic and cleaner with some work.
