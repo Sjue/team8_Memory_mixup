@@ -130,9 +130,9 @@ public:
 	}
 };
 //Image img[3] = {"./x.ppm", "./explosion.ppm", "./bship.ppm"};
-Image img[6] = {"./banana.png", "./explosion.png", "./background.png",
+Image img[7] = {"./banana.png", "./explosion.png", "./background.png",
  								"./title.png", "./mariohat.png",
-								"./luigihat.png"};
+								"./luigihat.png", "./waluigihat.png"};
 //
 //
 GLuint xTexture;
@@ -141,12 +141,14 @@ GLuint bshipTexture;
 GLuint titleTexture;
 GLuint mariohatTexture;
 GLuint luigihatTexture;
+GLuint waluigihatTexture;
 Image *xImage = NULL;
 Image *explosionImage = NULL;
 Image *bshipImage = NULL;
 Image *titleImage = NULL;
 Image *mariohatImage = NULL;
 Image *luigihatImage = NULL;
+Image *waluigihatImage = NULL;
 //
 #define MAXSHIPS 4
 typedef struct t_ship {
@@ -401,6 +403,7 @@ void init_opengl(void)
 	titleImage 			= &img[3];
 	mariohatImage 	= &img[4];
 	luigihatImage 	= &img[5];
+	waluigihatImage = &img[6];
 	//
 	//allocate opengl texture identifiers
 	glGenTextures(1, &xTexture);
@@ -409,6 +412,7 @@ void init_opengl(void)
 	glGenTextures(1, &titleTexture);
 	glGenTextures(1, &mariohatTexture);
 	glGenTextures(1, &luigihatTexture);
+	glGenTextures(1, &waluigihatTexture);
 	//
 	//load textures into memory
 	//-------------------------------------------------------------------------
@@ -469,9 +473,18 @@ void init_opengl(void)
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
 	glTexImage2D(GL_TEXTURE_2D, 0, 3, w, h, 0,
 								GL_RGB, GL_UNSIGNED_BYTE, luigihatImage->data);
-								
-	glBindTexture(GL_TEXTURE_2D, 0);
+
+
 	//printf("tex: %i %i\n",Htexture,Vtexture);S
+	//waluigihat
+	w = waluigihatImage->width;
+	h = waluigihatImage->height;
+	glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
+	glTexImage2D(GL_TEXTURE_2D, 0, 3, w, h, 0,
+								GL_RGB, GL_UNSIGNED_BYTE, waluigihatImage->data);
+	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 void reset_grids(void)
@@ -1049,7 +1062,7 @@ void render(void)
 		glEnd();
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
 		glBegin(GL_QUADS);
 			glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2+128,    614);
