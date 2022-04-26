@@ -3,6 +3,7 @@
 //CMPS3350: Group Project - My Source Code
 #include "sledwell.h"
 #include <GL/glx.h>
+#include <GL/gl.h>
 
 
 bool sledwell(int n);
