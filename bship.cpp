@@ -484,6 +484,7 @@ void init(void)
 	//initialize buttons...
 	nbuttons=0;
 
+	/* REMOVED CAUSE IT BRICKS
 	if(game_state == 1) {
 
 		button[nbuttons].r.width = 200;
@@ -497,7 +498,7 @@ void init(void)
 			(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
 		button[nbuttons].r.centery =
 			(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
-		strcpy(button[nbuttons].text, "Exit to Main Menu");
+		strcpy(button[nbuttons].text, "MIXUP!");
 		button[nbuttons].down = 0;
 		button[nbuttons].click = 0;
 		button[nbuttons].color[0] = 0.4f;
@@ -510,6 +511,7 @@ void init(void)
 		nbuttons++;
 		return;
 	}
+	*/
 	//
 	//Quit button
 	//size and position
@@ -1007,8 +1009,6 @@ void render(void)
 
 	if(game_state){
 		gamestate.printButtonGuide(xres, yres);
-		//put MIXUP! button
-		init();
 		//bind Mario Hat
 		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
