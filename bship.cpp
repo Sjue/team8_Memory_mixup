@@ -28,6 +28,7 @@
 #include "amilin.h"
 #include "srasapatirat.h"
 extern class Credits credits;
+extern class Gamestate gamestate1;
 //extern class Sjue sydney;
 //macros
 #define rnd() (double)rand()/(double)RAND_MAX
@@ -39,6 +40,7 @@ void get_grid_center(const int g, const int i, const int j, int cent[2]);
 int xres=1200;
 int yres=800;
 int credits_state = 0;
+int game_state = 0;
 int s = 15;
 //
 #define MAXGRID 16
@@ -619,6 +621,7 @@ void mouse_click(int ibutton, int action, int x, int y)
 				}
 				if (i==2) {
 					//user clicked START
+					game_state = 1;
 					gamemode++;
 				}
 			}
@@ -882,6 +885,10 @@ void render(void)
 	glClear(GL_COLOR_BUFFER_BIT);
 	if(credits_state){
 		credits.showPage(xres, yres);
+		return;
+	}
+	if(game_state){
+		gamestate1.showPage(xres, yres);
 		return;
 	}
 	//--------------------------------------------------------

@@ -4,6 +4,14 @@
 
 bool sledwell(int n);
 
+class Gamestate gamestate1;
+void Gamestate::showPage(int xres, int yres)
+{
+
+
+}
+
+
 int myMain()
 {
 //Adding some changes to see how github works
