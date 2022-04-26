@@ -130,19 +130,20 @@ public:
 	}
 };
 //Image img[3] = {"./x.ppm", "./explosion.ppm", "./bship.ppm"};
-Image img[4] = {"./banana.png", "./explosion.png", "./background.png",
- 								"./title.png"};
+Image img[5] = {"./banana.png", "./explosion.png", "./background.png",
+ 								"./title.png", "./mariohat.png"};
 //
 //
 GLuint xTexture;
 GLuint explosionTexture;
 GLuint bshipTexture;
 GLuint titleTexture;
+GLuint mariohatTexture;
 Image *xImage = NULL;
 Image *explosionImage = NULL;
 Image *bshipImage = NULL;
 Image *titleImage = NULL;
-
+Image *mariohatImage = NULL;
 //
 #define MAXSHIPS 4
 typedef struct t_ship {
@@ -218,7 +219,7 @@ public:
 	void set_title() {
 		//Set the window title bar.
 		XMapWindow(dpy, win);
-		XStoreName(dpy, win, "CS335 - OpenGL Animation Template Under XWindows");
+		XStoreName(dpy, win, "Memory Mixup");
 	}
 	void setup_screen_res(const int w, const int h) {
 		xres = w;
@@ -395,12 +396,14 @@ void init_opengl(void)
 	explosionImage  = &img[1];
 	bshipImage      = &img[2];
 	titleImage 			= &img[3];
+	mariohatImage 	= &img[4];
 	//
 	//allocate opengl texture identifiers
 	glGenTextures(1, &xTexture);
 	glGenTextures(1, &explosionTexture);
 	glGenTextures(1, &bshipTexture);
 	glGenTextures(1, &titleTexture);
+	glGenTextures(1, &mariohatTexture);
 	//
 	//load textures into memory
 	//-------------------------------------------------------------------------
@@ -441,6 +444,15 @@ void init_opengl(void)
 	glTexImage2D(GL_TEXTURE_2D, 0, 3, w, h, 0,
 								GL_RGB, GL_UNSIGNED_BYTE, titleImage->data);
 	//-------------------------------------------------------------------------
+	//-------------------------------------------------------------------------
+	//mariohat
+	w = mariohatImage->width;
+	h = mariohatImage->height;
+	glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);
+	glTexImage2D(GL_TEXTURE_2D, 0, 3, w, h, 0,
+								GL_RGB, GL_UNSIGNED_BYTE, mariohatImage->data);
 	glBindTexture(GL_TEXTURE_2D, 0);
 	//printf("tex: %i %i\n",Htexture,Vtexture);S
 }
@@ -471,9 +483,37 @@ void init(void)
 	//
 	//initialize buttons...
 	nbuttons=0;
+
+	if(game_state = 1) {
+
+		button[nbuttons].r.width = 200;
+		button[nbuttons].r.height = 50;
+		button[nbuttons].r.left = xres/2 - button[nbuttons].r.width/2;
+		button[nbuttons].r.bot = 10;
+		button[nbuttons].r.right =
+			button[nbuttons].r.left + button[nbuttons].r.width;
+		button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
+		button[nbuttons].r.centerx =
+			(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
+		button[nbuttons].r.centery =
+			(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
+		strcpy(button[nbuttons].text, "Exit to Main Menu");
+		button[nbuttons].down = 0;
+		button[nbuttons].click = 0;
+		button[nbuttons].color[0] = 0.4f;
+		button[nbuttons].color[1] = 0.4f;
+		button[nbuttons].color[2] = 0.7f;
+		button[nbuttons].dcolor[0] = button[nbuttons].color[0] * 0.5f;
+		button[nbuttons].dcolor[1] = button[nbuttons].color[1] * 0.5f;
+		button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
+		button[nbuttons].text_color = 0x00ffffff;
+		nbuttons++;
+		return;
+	}
 	//
 	//Quit button
 	//size and position
+	if (game_)
 	button[nbuttons].r.width = 200;
 	button[nbuttons].r.height = 50;
 	button[nbuttons].r.left = xres/2 - button[nbuttons].r.width/2;
@@ -968,6 +1008,18 @@ void render(void)
 
 	if(game_state){
 		gamestate.printButtonGuide(xres, yres);
+		//put MIXUP! button
+		init();
+		//bind Mario Hat
+		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		glColor3f(1.0f, 1.0f, 1.0f);
+		glBegin(GL_QUADS);
+			glTexCoord2f(0.0f, 1.0f);  glVertex2i(336,    564);
+			glTexCoord2f(0.0f, 0.0f); glVertex2i(336,    436);
+			glTexCoord2f(1.0f, 0.0f); glVertex2i(464, 436);
+			glTexCoord2f(1.0f, 1.0f);  glVertex2i(464, 564);
+		glEnd();
+		glBindTexture(GL_TEXTURE_2D, 0);
 
 		return;
 	}
