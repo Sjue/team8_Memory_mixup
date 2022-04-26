@@ -513,7 +513,6 @@ void init(void)
 	//
 	//Quit button
 	//size and position
-	if (game_)
 	button[nbuttons].r.width = 200;
 	button[nbuttons].r.height = 50;
 	button[nbuttons].r.left = xres/2 - button[nbuttons].r.width/2;
