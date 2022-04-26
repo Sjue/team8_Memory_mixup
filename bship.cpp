@@ -1009,17 +1009,71 @@ void render(void)
 
 	if(game_state){
 		gamestate.printButtonGuide(xres, yres);
-		//bind Mario Hat
+		//bind TOP shelf pos 1 , 2 , 3
+
 		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
 		glBegin(GL_QUADS);
-			glTexCoord2f(0.0f, 1.0f);  glVertex2i(336,    564);
-			glTexCoord2f(0.0f, 0.0f); glVertex2i(336,    436);
-			glTexCoord2f(1.0f, 0.0f); glVertex2i(464, 436);
-			glTexCoord2f(1.0f, 1.0f);  glVertex2i(464, 564);
+			glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-256,    614);
+			glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2-256,    486);
+			glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2-128, 486);
+			glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2-128, 614);
 		glEnd();
 		glBindTexture(GL_TEXTURE_2D, 0);
 
+
+		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		glColor3f(1.0f, 1.0f, 1.0f);
+		glBegin(GL_QUADS);
+			glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614);
+			glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2-64,    486);
+			glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2+64, 486);
+			glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614);
+		glEnd();
+		glBindTexture(GL_TEXTURE_2D, 0);
+
+		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		glColor3f(1.0f, 1.0f, 1.0f);
+		glBegin(GL_QUADS);
+			glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2+128,    614);
+			glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2+128,    486);
+			glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2+256, 486);
+			glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+256, 614);
+		glEnd();
+		glBindTexture(GL_TEXTURE_2D, 0);
+
+		/*
+		//bind BOT shelf pos 1 , 2 , 3
+		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		glColor3f(1.0f, 1.0f, 1.0f);
+		glBegin(GL_QUADS);
+			glTexCoord2f(0.0f, 0.0f);  glVertex2i(336,    564);
+			glTexCoord2f(0.0f, 1.0f); glVertex2i(336,    436);
+			glTexCoord2f(1.0f, 1.0f); glVertex2i(464, 436);
+			glTexCoord2f(1.0f, 0.0f);  glVertex2i(464, 564);
+		glEnd();
+		glBindTexture(GL_TEXTURE_2D, 0);
+
+		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		glColor3f(1.0f, 1.0f, 1.0f);
+		glBegin(GL_QUADS);
+			glTexCoord2f(0.0f, 0.0f);  glVertex2i(336,    564);
+			glTexCoord2f(0.0f, 1.0f); glVertex2i(336,    436);
+			glTexCoord2f(1.0f, 1.0f); glVertex2i(464, 436);
+			glTexCoord2f(1.0f, 0.0f);  glVertex2i(464, 564);
+		glEnd();
+		glBindTexture(GL_TEXTURE_2D, 0);
+
+		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		glColor3f(1.0f, 1.0f, 1.0f);
+		glBegin(GL_QUADS);
+			glTexCoord2f(0.0f, 0.0f);  glVertex2i(336,    564);
+			glTexCoord2f(0.0f, 1.0f); glVertex2i(336,    436);
+			glTexCoord2f(1.0f, 1.0f); glVertex2i(464, 436);
+			glTexCoord2f(1.0f, 0.0f);  glVertex2i(464, 564);
+		glEnd();
+		glBindTexture(GL_TEXTURE_2D, 0);
+		*/
 		return;
 	}
 
