@@ -17,7 +17,7 @@ class Gamestate gamestate;
 void Gamestate::showPage(int xres, int yres)
 {
 	Rect r;
-	r.bot = 50;
+	r.bot = yres - 50;
 	r.left = xres/2;
 	ggprint16(&r, 0, 0x0088aaff, "Press B to return to the Main Menu");
 }
