@@ -572,6 +572,10 @@ void check_keys(XEvent *e)
 	switch(key) {
 		//if (k1 == GLFW_KEY_F2) {
 		case XK_Escape:
+			if (game_state = 1) {
+				game_state = 0;
+				break;
+			}
 			done=1;
 			break;
 		case XK_c:
@@ -585,9 +589,6 @@ void check_keys(XEvent *e)
 			break;
 		// Plan is to put more keys that represent different items
 		// (bananas, mario/luigi/wario hat, shroom, egg, etc.)
-		case XK_b:
-			game_state = 0;
-			break;
 		case XK_F2:
 			gamemode++;
 			if (gamemode == MODE_FIND_SHIPS) {
