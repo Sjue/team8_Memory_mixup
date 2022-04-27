@@ -5,6 +5,7 @@
 //author:  gordon griesel
 //purpose: framework for a battleship game.
 //
+//PUSHING CHANGE TO TEXT LINUX
 //This program needs further refactoring.
 //Maybe a global class.
 //
