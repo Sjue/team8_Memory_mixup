@@ -653,15 +653,9 @@ void check_keys(XEvent *e)
 		case XK_c:
 			credits_state = !credits_state;
 			break;
-		case XK_m:
-		//---------------------------------
-		//midterm function doesn't add anything to project
-			//	sydney.sjue(s);
-		//---------------------------------
-			break;
 		// Plan is to put more keys that represent different items
 		// (bananas, mario/luigi/wario hat, shroom, egg, etc.)
-		case XK_F2:
+		/*case XK_F2:
 			gamemode++;
 			if (gamemode == MODE_FIND_SHIPS) {
 				nitems_guessed = 0;
@@ -670,7 +664,7 @@ void check_keys(XEvent *e)
 			if (gamemode > MODE_GAMEOVER) {
 				gamemode = MODE_READY;
 			}
-			break;
+			break;*/
 	}
 }
 
@@ -1109,7 +1103,7 @@ void render(void)
 		return;
 	}
 
-	if (gamemode != MODE_FIND_SHIPS) {
+	/*if (gamemode != MODE_FIND_SHIPS) {
 		//draw grid #1
 		// ...each grid square is drawn
 		//
@@ -1174,7 +1168,7 @@ void render(void)
 			glEnd();
 			glBindTexture(GL_TEXTURE_2D, 0);
 		}
-	}
+	}*/
 	glDisable(GL_BLEND);
 	//
 	//show text above each grid...
@@ -1247,18 +1241,17 @@ void render(void)
 			glBindTexture(GL_TEXTURE_2D, titleTexture);
 			glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
 			glBegin(GL_QUADS);
-				glTexCoord2f(0.0f, 1.0f);  glVertex2i(xres/2-128,    yres-178);
-				glTexCoord2f(0.0f, 0.0f); glVertex2i(xres/2-128,    yres-50);
-				glTexCoord2f(1.0f, 0.0f); glVertex2i(xres/2+128, yres-50);
-				glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres/2+128, yres-178);
+			glTexCoord2f(0.0f, 1.0f);  glVertex2i(xres/2-128,    yres-178);
+			glTexCoord2f(0.0f, 0.0f); glVertex2i(xres/2-128,    yres-50);
+			glTexCoord2f(1.0f, 0.0f); glVertex2i(xres/2+128, yres-50);
+			glTexCoord2f(1.0f, 1.0f);  glVertex2i(xres/2+128, yres-178);
 			glEnd();
 			glBindTexture(GL_TEXTURE_2D, 0);
-			ggprint16(&r, 0, 0x00ffffff, "Press F2 to place items!");
+			ggprint16(&r, 0, 0x00ffffff, "Press c to see credits page!");
 			break;
-		case MODE_PLACE_SHIPS:
-			ggprint16(&r, 0, 0x00ffffff,
-				"Press F2 when finished placing items.");
-			break;
+		/*case MODE_PLACE_SHIPS:
+			ggprint16(&r, 0, 0x00ffffff,".");
+			break;*/
 		case MODE_FIND_SHIPS:
 			ggprint16(&r, 0, 0x00ffffff, "Search for items on the shelf!");
 			break;
