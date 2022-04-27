@@ -1184,9 +1184,11 @@ void render(void)
 		r.left = xres/4;
 		r.bot  = yres-100;
 		r.center = 1;
-		ggprint16(&r, 0, color, "Grid #1");
+		//commented out code below
+		//ggprint16(&r, 0, color, "Grid #1");
 		r.left = xres/4*3;
-		ggprint16(&r, 0, color, "Grid #2");
+		//commented out code below
+		//ggprint16(&r, 0, color, "Grid #2");
 		//remove old title
 		/* r.bot  = yres-50;
 		r.left = xres/2;
