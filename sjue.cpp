@@ -14,13 +14,20 @@ void Credits::showPage(int xres, int yres)
 	Rect r;
 	r.bot = yres -50;
 	r.left = xres/2;
-	ggprint16(&r, 0, 0x0088aaff, "Credits");
+	ggprint16(&r, 0, 0x00000000, "Credits");
 	r.bot = yres - 200;
 	r.left = xres/2;
-	ggprint16(&r, 0, 0x00fe4164, "Creators: Sydney Jue, Spencer Ledwell"); 
+	ggprint16(&r, 0, 0x00000000, "Creators: Sydney Jue, Spencer Ledwell"); 
 	r.bot = yres - 250;
 	r.left = xres/2;
-	ggprint16(&r,0, 0x00fe4146,"Sunol Rasapatirat, Antonio Milin");
+	ggprint16(&r,0, 0x00000000,"Sunol Rasapatirat, Antonio Milin");
+
+	r.bot = yres - 350;
+	r.left = xres/2;
+	ggprint16(&r,0, 0x00000000, "Spencer Ledwell: Created all buttons on main menu screen, imported textures to the game and added game state that starts the game.");
+	r.bot = yres - 450;
+	r.left = xres/2;
+	ggprint16(&r,0, 0x00000000,"Sydney Jue: Got rid of grids on main menu and created Credits page");
 
 }
 
