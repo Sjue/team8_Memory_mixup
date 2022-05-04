@@ -270,7 +270,7 @@ void check_keys(XEvent *e);
 void check_mouse(XEvent *e);
 void physics();
 int check_connecting_quad(int i, int j, int gridno);
-int check_for_sink(int s);
+int check_if_item_is_guessed(int g);
 
 
 //-----------------------------------------------------------------------------
@@ -742,7 +742,7 @@ void mouse_click(int ibutton, int action, int x, int y)
 								grid2[i][j].status = 2;
 								{
 									//Did we guess the items place?
-									if (check_for_sink(s)) {
+									if (check_if_item_is_guessed(s)) {
 										nitems_guessed++;
 										nitems_left += 5;
 										if (nitems_guessed >= nitems) {
