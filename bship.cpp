@@ -79,6 +79,7 @@ typedef struct t_button {
 } Button;
 Button button[MAXBUTTONS];
 int nbuttons=0;
+int nbuttons_prev=0;
 //
 //
 class Image {
@@ -624,6 +625,8 @@ void init(void)
 	button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
 	button[nbuttons].text_color = 0x00ffffff;
 	nbuttons++;
+	
+	nbuttons_prev = nbuttons;
 }
 
 void check_keys(XEvent *e)
@@ -649,7 +652,9 @@ void check_keys(XEvent *e)
 		//if (k1 == GLFW_KEY_F2) {
 		case XK_Escape:
 			if (game_state = 1) {
+				nbuttons = nbuttons_prev;
 				game_state = 0;
+				//nbuttons = nbuttons_prev;
 				break;
 			}
 			done=1;
@@ -1043,6 +1048,9 @@ void render(void)
 	}
 
 	if(game_state){	
+		
+		nbuttons = 0;
+		
 		/*
 		- make 6 fixed positions
 		- fill those positions with randomly selected items
