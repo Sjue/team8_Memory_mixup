@@ -741,7 +741,7 @@ void mouse_click(int ibutton, int action, int x, int y)
 								int s = grid1[i][j].shipno;
 								grid2[i][j].status = 2;
 								{
-									//is this ship sunk?
+									//Did we guess the items place?
 									if (check_for_sink(s)) {
 										nitems_guessed++;
 										nitems_left += 5;
