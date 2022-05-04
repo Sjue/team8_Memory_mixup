@@ -550,80 +550,107 @@ void init(void)
 	//
 	//Quit button
 	//size and position
-	button[nbuttons].r.width = 200;
-	button[nbuttons].r.height = 50;
-	button[nbuttons].r.left = xres/2 - button[nbuttons].r.width/2;
-	button[nbuttons].r.bot = 10;
-	button[nbuttons].r.right =
-		button[nbuttons].r.left + button[nbuttons].r.width;
-	button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
-	button[nbuttons].r.centerx =
-		(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
-	button[nbuttons].r.centery =
-		(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
-	strcpy(button[nbuttons].text, "Exit Game");
-	button[nbuttons].down = 0;
-	button[nbuttons].click = 0;
-	button[nbuttons].color[0] = 0.4f;
-	button[nbuttons].color[1] = 0.4f;
-	button[nbuttons].color[2] = 0.7f;
-	button[nbuttons].dcolor[0] = button[nbuttons].color[0] * 0.5f;
-	button[nbuttons].dcolor[1] = button[nbuttons].color[1] * 0.5f;
-	button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
-	button[nbuttons].text_color = 0x00ffffff;
-	nbuttons++;
-	//
-	//Reset button
-	//size and position
-	button[nbuttons].r.width = 200;
-	button[nbuttons].r.height = 50;
-	button[nbuttons].r.left = xres/2 - button[nbuttons].r.width/2;
-	button[nbuttons].r.bot = 70;
-	button[nbuttons].r.right =
-		button[nbuttons].r.left + button[nbuttons].r.width;
-	button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
-	button[nbuttons].r.centerx =
-		(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
-	button[nbuttons].r.centery =
-		(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
-	strcpy(button[nbuttons].text, "Volume Toggle");
-	button[nbuttons].down = 0;
-	button[nbuttons].click = 0;
-	button[nbuttons].color[0] = 0.4f;
-	button[nbuttons].color[1] = 0.4f;
-	button[nbuttons].color[2] = 0.7f;
-	button[nbuttons].dcolor[0] = button[nbuttons].color[0] * 0.5f;
-	button[nbuttons].dcolor[1] = button[nbuttons].color[1] * 0.5f;
-	button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
-	button[nbuttons].text_color = 0x00ffffff;
-	nbuttons++;
+	if (game_state == 0) {
+		button[nbuttons].r.width = 200;
+		button[nbuttons].r.height = 50;
+		button[nbuttons].r.left = xres / 2 - button[nbuttons].r.width / 2;
+		button[nbuttons].r.bot = 10;
+		button[nbuttons].r.right =
+			button[nbuttons].r.left + button[nbuttons].r.width;
+		button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
+		button[nbuttons].r.centerx =
+			(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
+		button[nbuttons].r.centery =
+			(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
+		strcpy(button[nbuttons].text, "Exit Game");
+		button[nbuttons].down = 0;
+		button[nbuttons].click = 0;
+		button[nbuttons].color[0] = 0.4f;
+		button[nbuttons].color[1] = 0.4f;
+		button[nbuttons].color[2] = 0.7f;
+		button[nbuttons].dcolor[0] = button[nbuttons].color[0] * 0.5f;
+		button[nbuttons].dcolor[1] = button[nbuttons].color[1] * 0.5f;
+		button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
+		button[nbuttons].text_color = 0x00ffffff;
+		nbuttons++;
+		//
+		//Reset button
+		//size and position
+		button[nbuttons].r.width = 200;
+		button[nbuttons].r.height = 50;
+		button[nbuttons].r.left = xres / 2 - button[nbuttons].r.width / 2;
+		button[nbuttons].r.bot = 70;
+		button[nbuttons].r.right =
+			button[nbuttons].r.left + button[nbuttons].r.width;
+		button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
+		button[nbuttons].r.centerx =
+			(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
+		button[nbuttons].r.centery =
+			(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
+		strcpy(button[nbuttons].text, "Volume Toggle");
+		button[nbuttons].down = 0;
+		button[nbuttons].click = 0;
+		button[nbuttons].color[0] = 0.4f;
+		button[nbuttons].color[1] = 0.4f;
+		button[nbuttons].color[2] = 0.7f;
+		button[nbuttons].dcolor[0] = button[nbuttons].color[0] * 0.5f;
+		button[nbuttons].dcolor[1] = button[nbuttons].color[1] * 0.5f;
+		button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
+		button[nbuttons].text_color = 0x00ffffff;
+		nbuttons++;
 
-	//Start Button
-	//size and position
-	//Reset button
-	//size and position
-	button[nbuttons].r.width = 200;
-	button[nbuttons].r.height = 50;
-	button[nbuttons].r.left = xres/2 - button[nbuttons].r.width/2;
-	button[nbuttons].r.bot = 130;
-	button[nbuttons].r.right =
-		button[nbuttons].r.left + button[nbuttons].r.width;
-	button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
-	button[nbuttons].r.centerx =
-		(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
-	button[nbuttons].r.centery =
-		(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
-	strcpy(button[nbuttons].text, "Start");
-	button[nbuttons].down = 0;
-	button[nbuttons].click = 0;
-	button[nbuttons].color[0] = 0.4f;
-	button[nbuttons].color[1] = 0.4f;
-	button[nbuttons].color[2] = 0.7f;
-	button[nbuttons].dcolor[0] = button[nbuttons].color[0] * 0.5f;
-	button[nbuttons].dcolor[1] = button[nbuttons].color[1] * 0.5f;
-	button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
-	button[nbuttons].text_color = 0x00ffffff;
-	nbuttons++;
+		//Start Button
+		//size and position
+		//Reset button
+		//size and position
+		button[nbuttons].r.width = 200;
+		button[nbuttons].r.height = 50;
+		button[nbuttons].r.left = xres / 2 - button[nbuttons].r.width / 2;
+		button[nbuttons].r.bot = 130;
+		button[nbuttons].r.right =
+			button[nbuttons].r.left + button[nbuttons].r.width;
+		button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
+		button[nbuttons].r.centerx =
+			(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
+		button[nbuttons].r.centery =
+			(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
+		strcpy(button[nbuttons].text, "Start");
+		button[nbuttons].down = 0;
+		button[nbuttons].click = 0;
+		button[nbuttons].color[0] = 0.4f;
+		button[nbuttons].color[1] = 0.4f;
+		button[nbuttons].color[2] = 0.7f;
+		button[nbuttons].dcolor[0] = button[nbuttons].color[0] * 0.5f;
+		button[nbuttons].dcolor[1] = button[nbuttons].color[1] * 0.5f;
+		button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
+		button[nbuttons].text_color = 0x00ffffff;
+		nbuttons++;
+	}
+
+	if (game_state == 1) {
+		button[nbuttons].r.width = 200;
+		button[nbuttons].r.height = 50;
+		button[nbuttons].r.left = xres / 2 - button[nbuttons].r.width / 2;
+		button[nbuttons].r.bot = 130;
+		button[nbuttons].r.right =
+			button[nbuttons].r.left + button[nbuttons].r.width;
+		button[nbuttons].r.top = button[nbuttons].r.bot + button[nbuttons].r.height;
+		button[nbuttons].r.centerx =
+			(button[nbuttons].r.left + button[nbuttons].r.right) / 2;
+		button[nbuttons].r.centery =
+			(button[nbuttons].r.bot + button[nbuttons].r.top) / 2;
+		strcpy(button[nbuttons].text, "MIXUP!!");
+		button[nbuttons].down = 0;
+		button[nbuttons].click = 0;
+		button[nbuttons].color[0] = 0.4f;
+		button[nbuttons].color[1] = 0.4f;
+		button[nbuttons].color[2] = 0.7f;
+		button[nbuttons].dcolor[0] = button[nbuttons].color[0] * 0.5f;
+		button[nbuttons].dcolor[1] = button[nbuttons].color[1] * 0.5f;
+		button[nbuttons].dcolor[2] = button[nbuttons].color[2] * 0.5f;
+		button[nbuttons].text_color = 0x00ffffff;
+		nbuttons++;
+	}
 }
 
 void check_keys(XEvent *e)
@@ -676,36 +703,58 @@ void mouse_click(int ibutton, int action, int x, int y)
 {
 	int con;
 	if (action == 1) {
-		int i,j,k,m=0;
+		int i, j, k, m = 0;
 		//center of a grid
 		int cent[2];
 		//
 		//buttons?
-		for (i=0; i<nbuttons; i++) {
-			if (button[i].over) {
-				button[i].down = 1;
-				button[i].click = 1;
-				if (i==0) {
-					//user clicked QUIT
-					done = 1;
-				}
-				if (i==1) {
-					//user clicked button 0
-					reset_grids();
-				}
-				if (i==2) {
-					//user clicked START
-					game_state = 1;
-					gamemode++;
-					pos1 = mixup.randos();
-					pos2 = mixup.randos();
-					pos3 = mixup.randos();
-					pos4 = mixup.randos();
-					pos5 = mixup.randos();
-					pos6 = mixup.randos();
+		if (game_state == 0) {
+			for (i = 0; i < nbuttons; i++) {
+				if (button[i].over) {
+					button[i].down = 1;
+					button[i].click = 1;
+					if (i == 0) {
+						//user clicked QUIT
+						done = 1;
+					}
+					if (i == 1) {
+						//user clicked button 0
+						reset_grids();
+					}
+					if (i == 2) {
+						//user clicked START
+						game_state = 1;
+						gamemode++;
+						pos1 = mixup.randos();
+						pos2 = mixup.randos();
+						pos3 = mixup.randos();
+						pos4 = mixup.randos();
+						pos5 = mixup.randos();
+						pos6 = mixup.randos();
+					}
 				}
 			}
 		}
+
+		if (game_state = 1) {
+			for (i = 0; i < nbuttons; i++) {
+				if (button[i].over) {
+					button[i].down = 1;
+					button[i].click = 1;
+					if (i == 0) {
+						//user clicked MIXUP
+						pos1 = mixup.randos();
+						pos2 = mixup.randos();
+						pos3 = mixup.randos();
+						pos4 = mixup.randos();
+						pos5 = mixup.randos();
+						pos6 = mixup.randos();
+					}
+				}
+			}
+
+		}
+
 		for (i=0; i<grid_dim; i++) {
 			for (j=0; j<grid_dim; j++) {
 				if (gamemode == MODE_PLACE_SHIPS) {
