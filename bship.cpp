@@ -1033,6 +1033,14 @@ void render(void)
 	}
 
 	if(game_state){
+		
+		/*
+		- make 6 fixed positions
+		- fill those positions with randomly selected items
+		- when pressed a certai key, the game starts and items disappear
+			- the positions of items are stored into memory to check if we guessed their position
+		- we can press few different keys each for specific item
+		*/
 		gamestate.printButtonGuide(xres, yres);
 		//bind TOP shelf pos 1 , 2 , 3
 
