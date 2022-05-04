@@ -899,12 +899,12 @@ int check_connecting_quad(int i, int j, int gridno)
 	return 0;
 }
 
-int check_for_sink(int s)
+int check_if_item_is_guessed(int g)
 {
 	int i,j,sunk=1;
 	for (i=0; i<grid_dim; i++) {
 		for (j=0; j<grid_dim; j++) {
-			if (grid1[i][j].shipno == s &&
+			if (grid1[i][j].shipno == g &&
 				grid2[i][j].status != 2) {
 				sunk=0;
 				break;
