@@ -655,7 +655,8 @@ void check_keys(XEvent *e)
 				
 				game_state = 0;
 				nbuttons = nbuttons_prev;
-				set_title();
+				XMapWindow(dpy, win);
+				XStoreName(dpy, win, "Memory Mixup");
 				break;
 			}
 			done=1;
