@@ -32,7 +32,7 @@ void Credits::showPage(int xres, int yres)
 	r.bot = yres - 550;
 	r.left = xres/2;
 	ggprint16(&r,0, 0x00000000,"Antonio Milin: Changed visual elements, put a new background and changed the color fade of the program,");
-	r.bot = yres - 560;
+	r.bot = yres - 570;
 	ggprint16(&r,0, 0x00000000," adjusted and edited item pictures and imported them into the bship.cpp");
 }
 
