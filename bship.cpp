@@ -19,6 +19,8 @@
 #include <X11/Xlib.h>
 #include <X11/keysym.h>
 #include <GL/glx.h>
+#include <cstdlib>
+#include <ctime>
 //#include <X11/Xutil.h>
 //#include <GL/gl.h>
 //#include <GL/glu.h>
@@ -28,9 +30,10 @@
 #include "sledwell.h"
 #include "amilin.h"
 #include "srasapatirat.h"
+
 extern class Credits credits;
 extern class Gamestate gamestate;
-//extern class Sjue sydney;
+extern class Sjue mixup;
 //macros
 #define rnd() (double)rand()/(double)RAND_MAX
 //prototypes
@@ -43,6 +46,7 @@ int yres=800;
 int credits_state = 0;
 int game_state = 0;
 int s = 15;
+int pos1, pos2, pos3, pos4, pos5, pos6;
 //
 #define MAXGRID 16
 #define GRIDDIM 10
@@ -693,6 +697,12 @@ void mouse_click(int ibutton, int action, int x, int y)
 					//user clicked START
 					game_state = 1;
 					gamemode++;
+					pos1 = mixup.randos();
+					pos2 = mixup.randos();
+					pos3 = mixup.randos();
+					pos4 = mixup.randos();
+					pos5 = mixup.randos();
+					pos6 = mixup.randos();
 				}
 			}
 		}
@@ -1032,8 +1042,7 @@ void render(void)
 		return;
 	}
 
-	if(game_state){
-		
+	if(game_state){	
 		/*
 		- make 6 fixed positions
 		- fill those positions with randomly selected items
@@ -1043,8 +1052,16 @@ void render(void)
 		*/
 		gamestate.printButtonGuide(xres, yres);
 		//bind TOP shelf pos 1 , 2 , 3
-
+		if(pos1 == 1){
 		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		} 
+		if(pos1 == 2){
+		
+		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+		}
+		if(pos1 == 3){
+		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+		}
 		glColor3f(1.0f, 1.0f, 1.0f);
 		glBegin(GL_QUADS);
 			glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-256,    614);
@@ -1055,7 +1072,17 @@ void render(void)
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 
+		if(pos2 == 1){
+		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		} 
+		if(pos2 == 2){
+		
 		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+		}
+		if(pos2 == 3){
+		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+		}
+		//glBindTexture(GL_TEXTURE_2D, luigihatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
 		glBegin(GL_QUADS);
 			glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614);
@@ -1064,8 +1091,18 @@ void render(void)
 			glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614);
 		glEnd();
 		glBindTexture(GL_TEXTURE_2D, 0);
-
+		
+		if(pos3 == 1){
+		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		} 
+		if(pos3 == 2){
+		
+		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+		}
+		if(pos3 == 3){
 		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+		}
+		//glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
 		glBegin(GL_QUADS);
 			glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2+128,    614);
@@ -1077,7 +1114,18 @@ void render(void)
 
 
 		//bind BOT shelf pos 1 , 2 , 3
+
+		if(pos4 == 1){
 		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		} 
+		if(pos4 == 2){
+		
+		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+		}
+		if(pos4 == 3){
+		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+		}
+		//glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
 		glBegin(GL_QUADS);
 			glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-256,    614-192);
@@ -1087,8 +1135,17 @@ void render(void)
 		glEnd();
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-
+		if(pos5 == 1){
 		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		} 
+		if(pos5 == 2){
+		
+		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+		}
+		if(pos5 == 3){
+		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+		}
+		//glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
 		glBegin(GL_QUADS);
 			glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614-192);
@@ -1098,7 +1155,17 @@ void render(void)
 		glEnd();
 		glBindTexture(GL_TEXTURE_2D, 0);
 
+		if(pos6 == 1){
 		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+		} 
+		if(pos6 == 2){
+		
+		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+		}
+		if(pos6 == 3){
+		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+		}
+		//glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
 		glBegin(GL_QUADS);
 			glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2+128,    614-192);

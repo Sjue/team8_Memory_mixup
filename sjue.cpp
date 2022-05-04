@@ -6,9 +6,12 @@
 #include <X11/Xlib.h>
 #include "sjue.h"
 #include <stdlib.h>
+#include <cstdlib>
+#include <ctime>
+
 
 class Credits credits; //initial instance of credits class
-//class Sjue sydney;
+class Sjue mixup;
 void Credits::showPage(int xres, int yres)
 {
 	Rect r;
@@ -36,15 +39,12 @@ void Credits::showPage(int xres, int yres)
 	ggprint16(&r,0, 0x00000000," adjusted and edited item pictures and imported them into the bship.cpp");
 }
 
-/*void Sjue::sjue(int x)
+int Sjue::randos()
 {
- if(x > 5 && x < 20){
-	 printf("Number Successful!\n");
-	 return;
- }else{
+//	srand(time(NULL));
+	int randNUM = (rand()% 3) + 1;
+//	printf("Num: %i\n", randNUM);
+	return randNUM;
+}
 
-	 printf("Number is not between 5 and 20 try again\n");
-	 return;
- }
-
-}*/
+//}
