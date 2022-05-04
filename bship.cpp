@@ -652,9 +652,10 @@ void check_keys(XEvent *e)
 		//if (k1 == GLFW_KEY_F2) {
 		case XK_Escape:
 			if (game_state = 1) {
-				nbuttons = nbuttons_prev;
+				
 				game_state = 0;
-				//nbuttons = nbuttons_prev;
+				nbuttons = nbuttons_prev;
+				set_title();
 				break;
 			}
 			done=1;
