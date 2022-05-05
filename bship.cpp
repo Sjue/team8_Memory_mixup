@@ -659,7 +659,7 @@ void check_keys(XEvent *e)
 				
 				break;
 			}
-			done=1;
+			//done=1;
 			break;
 		case XK_c:
 			credits_state = !credits_state;
