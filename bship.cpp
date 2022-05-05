@@ -1057,6 +1057,13 @@ void render(void)
 		
 		nbuttons = 0;
 		
+		r.left = 4;
+		r.bot  = 160;
+		r.center = 0;
+		ggprint16(&r, 20, 0x00ffff00, "Items placed: %i",nitems);
+		ggprint16(&r, 20, 0x00ffff00, "Items guessed: %i",nitems_guessed);
+		ggprint16(&r, 20, 0x00ffff00, "Items left: %i",nitems_left);
+		
 		/*
 		- make 6 fixed positions
 		- fill those positions with randomly selected items
