@@ -1,6 +1,7 @@
 //Sydney, Spencer, Antonio, Sunol
 //cs335 Spring 2014 - 2018
 //program: bship.c
+// ...
 //         refactored to bship.cpp
 //author:  gordon griesel
 //purpose: framework for a battleship game.
