@@ -1045,6 +1045,7 @@ void render(void)
 	//
 
 	if(credits_state){
+		nbuttons = 0;
 		credits.showPage(xres, yres);
 		return;
 	}
