@@ -27,16 +27,28 @@ void Credits::showPage(int xres, int yres)
 
 	r.bot = yres - 350;
 	r.left = xres/2;
-	ggprint16(&r,0, 0x00000000, "Spencer Ledwell: Created all buttons on main menu screen, imported textures to the game and added game state that starts the game.");
+	ggprint16(&r,0,0x00000000,"Spencer Ledwell:Created buttons on main menu");
+	r.bot = yres - 370;
+	ggprint16(&r, 0, 0x00000000,"imported textures to the game and");
+        r.bot = yres -390;
+ 	ggprint16(&r, 0, 0x00000000,"added game state that starts the game.");
 	r.bot = yres - 450;
 	r.left = xres/2;
-	ggprint16(&r,0, 0x00000000,"Sydney Jue: Got rid of grids on main menu and created Credits page");
+	ggprint16(&r, 0, 0x00000000,"Sydney Jue: Got rid of grids on main menu"); 
+	r.bot = yres- 470;
+	ggprint16(&r,0,0x00000000,"implemented randomization for images");
+       	r.bot = yres -490;
+	ggprint16(&r, 0, 0x00000000,"and created Credits page");
 	//antonio
 	r.bot = yres - 550;
 	r.left = xres/2;
-	ggprint16(&r,0, 0x00000000,"Antonio Milin: Changed visual elements, put a new background and changed the color fade of the program,");
+	ggprint16(&r,0, 0x00000000,"Antonio Milin: Changed visual elements,");
 	r.bot = yres - 570;
-	ggprint16(&r,0, 0x00000000," adjusted and edited item pictures and imported them into the bship.cpp");
+       	ggprint16(&r,0,0x00000000,"put a new background,");
+       	r.bot = yres -590;
+       	ggprint16(&r, 0, 0x00000000,"changed the color fade of the program,");
+	r.bot = yres - 610;
+	ggprint16(&r,0, 0x00000000," adjusted and edited item pictures");
 }
 
 int Sjue::randos()
