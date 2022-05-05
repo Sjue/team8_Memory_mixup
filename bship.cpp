@@ -722,7 +722,8 @@ void mouse_click(int ibutton, int action, int x, int y)
 						x <= cent[0]+qsize &&
 						y >= cent[1]-qsize &&
 						y <= cent[1]+qsize) {
-						if (ibutton == 1) {
+						int test = amilin(ibutton);
+						if (test == 1) {
 							//does this quad have any connecting quads?
 							con = check_connecting_quad(i,j,1);
 							if (con != 0) {
@@ -752,7 +753,7 @@ void mouse_click(int ibutton, int action, int x, int y)
 						y <= cent[1]+qsize) {
 						//if(ibutton == 1)
 						// My code
-						int test = amilin(ibutton);
+						test = amilin(ibutton);
 						if (test == 1) {
 							nitems_left--;
 							if (grid1[i][j].status) {
