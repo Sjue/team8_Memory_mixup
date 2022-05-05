@@ -6,7 +6,7 @@
 void srasapatirat (int n) {
 
 	
-	int items[10] = 0;
+	int items[10] = {0};
 	for (int i = 0; i < 10; i++) {
 		if (n == items[i]) {
 			int chosenItem = items[i];
