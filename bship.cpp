@@ -1074,14 +1074,13 @@ void render(void)
 		gamestate.printButtonGuide(xres, yres);
 		//bind TOP shelf pos 1 , 2 , 3
 		if(pos1 == 1){
-		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+			glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		} 
-		if(pos1 == 2){
-		
-		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+		if(pos1 == 2){	
+			glBindTexture(GL_TEXTURE_2D, luigihatTexture);
 		}
 		if(pos1 == 3){
-		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
 		}
 		glColor3f(1.0f, 1.0f, 1.0f);
 		glBegin(GL_QUADS);
@@ -1094,14 +1093,13 @@ void render(void)
 
 
 		if(pos2 == 1){
-		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+			glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		} 
 		if(pos2 == 2){
-		
-		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, luigihatTexture);
 		}
 		if(pos2 == 3){
-		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
 		}
 		//glBindTexture(GL_TEXTURE_2D, luigihatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
@@ -1114,14 +1112,13 @@ void render(void)
 		glBindTexture(GL_TEXTURE_2D, 0);
 		
 		if(pos3 == 1){
-		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+			glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		} 
 		if(pos3 == 2){
-		
-		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, luigihatTexture);
 		}
 		if(pos3 == 3){
-		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
 		}
 		//glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
@@ -1137,14 +1134,13 @@ void render(void)
 		//bind BOT shelf pos 1 , 2 , 3
 
 		if(pos4 == 1){
-		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+			glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		} 
 		if(pos4 == 2){
-		
-		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, luigihatTexture);
 		}
 		if(pos4 == 3){
-		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
 		}
 		//glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
@@ -1157,14 +1153,13 @@ void render(void)
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		if(pos5 == 1){
-		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+			glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		} 
 		if(pos5 == 2){
-		
-		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, luigihatTexture);
 		}
 		if(pos5 == 3){
-		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
 		}
 		//glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
@@ -1177,14 +1172,13 @@ void render(void)
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		if(pos6 == 1){
-		glBindTexture(GL_TEXTURE_2D, mariohatTexture);
+			glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		} 
 		if(pos6 == 2){
-		
-		glBindTexture(GL_TEXTURE_2D, luigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, luigihatTexture);
 		}
 		if(pos6 == 3){
-		glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
+			glBindTexture(GL_TEXTURE_2D, waluigihatTexture);
 		}
 		//glBindTexture(GL_TEXTURE_2D, mariohatTexture);
 		glColor3f(1.0f, 1.0f, 1.0f);
