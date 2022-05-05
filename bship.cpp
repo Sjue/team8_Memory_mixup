@@ -663,6 +663,7 @@ void check_keys(XEvent *e)
 			break;
 		case XK_c:
 			credits_state = !credits_state;
+			nbuttons = nbuttons_prev;
 			break;
 		// Plan is to put more keys that represent different items
 		// (bananas, mario/luigi/wario hat, shroom, egg, etc.)
