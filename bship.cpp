@@ -753,7 +753,7 @@ void mouse_click(int ibutton, int action, int x, int y)
 						y <= cent[1]+qsize) {
 						//if(ibutton == 1)
 						// My code
-						test = amilin(ibutton);
+						int test = amilin(ibutton);
 						if (test == 1) {
 							nitems_left--;
 							if (grid1[i][j].status) {
