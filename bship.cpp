@@ -1342,6 +1342,12 @@ void render(void)
 			ggprint16(&r, 0, 0x00ffffff,".");
 			break;*/
 		case MODE_FIND_SHIPS:
+			r.left = 4;
+			r.bot  = 160;
+			r.center = 0;
+			ggprint16(&r, 20, 0x00ffff00, "Items placed: %i",nitems);
+			ggprint16(&r, 20, 0x00ffff00, "Items guessed: %i",nitems_guessed);
+			ggprint16(&r, 20, 0x00ffff00, "Items left: %i",nitems_left);
 			ggprint16(&r, 0, 0x00ffffff, "Search for items on the shelf!");
 			break;
 		case MODE_GAMEOVER:
