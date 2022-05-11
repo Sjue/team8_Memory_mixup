@@ -150,7 +150,7 @@ Image img[7] = {"./banana.png", "./explosion.png", "./background.png",
     "./luigihat.png", "./waluigihat.png"};
 
 //SR images 3 to 0 
-Image CountDown[4] = {"./3.png", "./2.png", "./1.png", "./3.png"};
+Image CountDown[4] = {"./3.png", "./2.png", "./1.png", "./0.png"};
 //SR
 
 
@@ -441,10 +441,10 @@ void init_opengl(void)
     //
 
     //SR
-    threeImg = &img[7];
-    twoImg = &img[8];
-    oneImg = &img[9];
-    zeroImg = &img[10]; 
+    threeImg = &CountDown[0];
+    twoImg = &CountDown[1];
+    oneImg = &CountDown[2];
+    zeroImg = &CountDown[3]; 
     //SR
 
 
