@@ -424,7 +424,7 @@ int main()
  */
         
         //Always render every frame.
-        //render();
+        render();
         x11.swapBuffers();
     }
     //cleanupXWindows();
