@@ -365,6 +365,7 @@ int main()
             physicsCountdown -= physicsRate;
         }
         
+                /*
                 render();
                 if(game_state){
                 glBindTexture(GL_TEXTURE_2D, threeTexture);
@@ -420,7 +421,7 @@ int main()
                 glEnd();
                 glBindTexture(GL_TEXTURE_2D, 0);
                 }
- 
+ */
         
         //Always render every frame.
         //render();
@@ -1332,7 +1333,7 @@ void check_keys(XEvent *e)
             glEnd();
             glBindTexture(GL_TEXTURE_2D, 0);
 
-            /*SR
+            //SR
             int i = 0;
             while(i < 4) {
                 sleep(2);
@@ -1358,11 +1359,6 @@ void check_keys(XEvent *e)
                 glBindTexture(GL_TEXTURE_2D, 0);
                 i++;
             }
-
-            */
-
-
-
 
             return;
         }
