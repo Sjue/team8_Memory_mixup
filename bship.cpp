@@ -377,7 +377,7 @@ int main()
                 glEnd();
                 glBindTexture(GL_TEXTURE_2D, 0);
         
-                //render();
+                render();
                 
                 sleep(2);
         
@@ -391,7 +391,7 @@ int main()
                 glEnd();
                 glBindTexture(GL_TEXTURE_2D, 0);
         
-                //render();
+                render();
                 
                 sleep(2);
         
@@ -405,7 +405,7 @@ int main()
                 glEnd();
                 glBindTexture(GL_TEXTURE_2D, 0);
         
-                //render();
+                render();
                 
                 sleep(2);
         
@@ -1532,7 +1532,5 @@ void check_keys(XEvent *e)
         r.left = 4;
         r.bot  = 160;
         r.center = 0;
-        ggprint16(&r, 20, 0x00ffff00, "Items placed: %i",nitems);
-        ggprint16(&r, 20, 0x00ffff00, "Items guessed: %i",nitems_guessed);
-        ggprint16(&r, 20, 0x00ffff00, "Items left: %i",nitems_left);
+
     }
