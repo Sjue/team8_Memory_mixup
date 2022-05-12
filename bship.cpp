@@ -149,7 +149,7 @@ Image img[7] = {"./banana.png", "./explosion.png", "./background.png",
     "./title.png", "./mariohat.png",
     "./luigihat.png", "./waluigihat.png"};
 
-//SR images 3 to 0 
+//SR images 3 to 0
 Image CountDown[4] = {"./3.png", "./2.png", "./1.png", "./0.png"};
 //SR
 
@@ -444,7 +444,7 @@ void init_opengl(void)
     threeImg = &CountDown[0];
     twoImg = &CountDown[1];
     oneImg = &CountDown[2];
-    zeroImg = &CountDown[3]; 
+    zeroImg = &CountDown[3];
     //SR
 
 
@@ -1137,7 +1137,7 @@ void check_keys(XEvent *e)
             return;
         }
 
-        if(game_state){	
+        if(game_state){
 
             nbuttons = 0;
 
@@ -1159,8 +1159,8 @@ void check_keys(XEvent *e)
             //bind TOP shelf pos 1 , 2 , 3
             if(pos1 == 1){
                 glBindTexture(GL_TEXTURE_2D, mariohatTexture);
-            } 
-            if(pos1 == 2){	
+            }
+            if(pos1 == 2){
                 glBindTexture(GL_TEXTURE_2D, luigihatTexture);
             }
             if(pos1 == 3){
@@ -1178,7 +1178,7 @@ void check_keys(XEvent *e)
 
             if(pos2 == 1){
                 glBindTexture(GL_TEXTURE_2D, mariohatTexture);
-            } 
+            }
             if(pos2 == 2){
                 glBindTexture(GL_TEXTURE_2D, luigihatTexture);
             }
@@ -1197,7 +1197,7 @@ void check_keys(XEvent *e)
 
             if(pos3 == 1){
                 glBindTexture(GL_TEXTURE_2D, mariohatTexture);
-            } 
+            }
             if(pos3 == 2){
                 glBindTexture(GL_TEXTURE_2D, luigihatTexture);
             }
@@ -1219,7 +1219,7 @@ void check_keys(XEvent *e)
 
             if(pos4 == 1){
                 glBindTexture(GL_TEXTURE_2D, mariohatTexture);
-            } 
+            }
             if(pos4 == 2){
                 glBindTexture(GL_TEXTURE_2D, luigihatTexture);
             }
@@ -1238,7 +1238,7 @@ void check_keys(XEvent *e)
 
             if(pos5 == 1){
                 glBindTexture(GL_TEXTURE_2D, mariohatTexture);
-            } 
+            }
             if(pos5 == 2){
                 glBindTexture(GL_TEXTURE_2D, luigihatTexture);
             }
@@ -1257,7 +1257,7 @@ void check_keys(XEvent *e)
 
             if(pos6 == 1){
                 glBindTexture(GL_TEXTURE_2D, mariohatTexture);
-            } 
+            }
             if(pos6 == 2){
                 glBindTexture(GL_TEXTURE_2D, luigihatTexture);
             }
@@ -1277,7 +1277,6 @@ void check_keys(XEvent *e)
             //SR
             int i = 0;
             while(i < 4) {
-                sleep(2);
                 if (i == 0) {
                     glBindTexture(GL_TEXTURE_2D, threeTexture);
                 }
@@ -1288,7 +1287,7 @@ void check_keys(XEvent *e)
                     glBindTexture(GL_TEXTURE_2D, oneTexture);
                 }
                 if (i == 3) {
-                    glBindTexture(GL_TEXTURE_2D, zeroTexture);
+                    glBindTexture(GL_TEXTURE_2D, zeroTexture);				
                 }
                 glColor3f(1.0f, 1.0f, 1.0f);
                 glBegin(GL_QUADS);
@@ -1298,6 +1297,7 @@ void check_keys(XEvent *e)
                 glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614+152);
                 glEnd();
                 glBindTexture(GL_TEXTURE_2D, 0);
+				sleep(1);
                 i++;
             }
 
