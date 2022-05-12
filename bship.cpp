@@ -365,7 +365,8 @@ int main()
             physicsCountdown -= physicsRate;
         }
         
-                
+                render();
+                if(game_state){
                 glBindTexture(GL_TEXTURE_2D, threeTexture);
                 glColor3f(1.0f, 1.0f, 1.0f);
                 glBegin(GL_QUADS);
@@ -376,7 +377,7 @@ int main()
                 glEnd();
                 glBindTexture(GL_TEXTURE_2D, 0);
         
-                render();
+                //render();
                 
                 sleep(2);
         
@@ -390,7 +391,7 @@ int main()
                 glEnd();
                 glBindTexture(GL_TEXTURE_2D, 0);
         
-                render();
+                //render();
                 
                 sleep(2);
         
@@ -404,7 +405,7 @@ int main()
                 glEnd();
                 glBindTexture(GL_TEXTURE_2D, 0);
         
-                render();
+                //render();
                 
                 sleep(2);
         
@@ -418,6 +419,7 @@ int main()
                 glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614+152);
                 glEnd();
                 glBindTexture(GL_TEXTURE_2D, 0);
+                }
  
         
         //Always render every frame.
