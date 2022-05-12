@@ -49,6 +49,8 @@ void Credits::showPage(int xres, int yres)
        	ggprint16(&r, 0, 0x00000000,"changed the color fade of the program,");
 	r.bot = yres - 610;
 	ggprint16(&r,0, 0x00000000," adjusted and edited item pictures");
+	r.bot = yres - 630;
+	ggprint16(&r,0, 0x00000000,"fixed few bugs in the game");
 }
 
 int Sjue::randos()
