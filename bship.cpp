@@ -1145,6 +1145,7 @@ void check_keys(XEvent *e)
             r.left = 4;
             r.bot  = 160;
             r.center = 0;
+            ggprint16(&r, 20, 0x00ffff00, "AFTER THE COUNTDOWN START PUTTING ITEMS ON THE SHELF!");
             ggprint16(&r, 20, 0x00ffff00, "Items guessed: %i",nitems_guessed);
             ggprint16(&r, 20, 0x00ffff00, "Items left: %i",nitems_left);
 
