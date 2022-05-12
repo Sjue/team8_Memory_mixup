@@ -364,8 +364,64 @@ int main()
             //7. Reduce the countdown by our physics-rate
             physicsCountdown -= physicsRate;
         }
+        
+                
+                glBindTexture(GL_TEXTURE_2D, threeTexture);
+                glColor3f(1.0f, 1.0f, 1.0f);
+                glBegin(GL_QUADS);
+                glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614+152);
+                glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2-64,    486+152);
+                glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2+64, 486+152);
+                glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614+152);
+                glEnd();
+                glBindTexture(GL_TEXTURE_2D, 0);
+        
+                render();
+                
+                sleep(2);
+        
+                glBindTexture(GL_TEXTURE_2D, twoTexture);
+                glColor3f(1.0f, 1.0f, 1.0f);
+                glBegin(GL_QUADS);
+                glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614+152);
+                glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2-64,    486+152);
+                glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2+64, 486+152);
+                glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614+152);
+                glEnd();
+                glBindTexture(GL_TEXTURE_2D, 0);
+        
+                render();
+                
+                sleep(2);
+        
+                glBindTexture(GL_TEXTURE_2D, oneTexture);
+                glColor3f(1.0f, 1.0f, 1.0f);
+                glBegin(GL_QUADS);
+                glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614+152);
+                glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2-64,    486+152);
+                glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2+64, 486+152);
+                glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614+152);
+                glEnd();
+                glBindTexture(GL_TEXTURE_2D, 0);
+        
+                render();
+                
+                sleep(2);
+        
+                glBindTexture(GL_TEXTURE_2D, zeroTexture);
+
+                glColor3f(1.0f, 1.0f, 1.0f);
+                glBegin(GL_QUADS);
+                glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614+152);
+                glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2-64,    486+152);
+                glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2+64, 486+152);
+                glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614+152);
+                glEnd();
+                glBindTexture(GL_TEXTURE_2D, 0);
+ 
+        
         //Always render every frame.
-        render();
+        //render();
         x11.swapBuffers();
     }
     //cleanupXWindows();
@@ -1274,7 +1330,7 @@ void check_keys(XEvent *e)
             glEnd();
             glBindTexture(GL_TEXTURE_2D, 0);
 
-            //SR
+            /*SR
             int i = 0;
             while(i < 4) {
                 sleep(2);
@@ -1301,7 +1357,7 @@ void check_keys(XEvent *e)
                 i++;
             }
 
-            //SR
+            */
 
 
 
