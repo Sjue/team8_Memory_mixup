@@ -365,64 +365,6 @@ int main()
             physicsCountdown -= physicsRate;
         }
         
-                /*
-                render();
-                if(game_state){
-                glBindTexture(GL_TEXTURE_2D, threeTexture);
-                glColor3f(1.0f, 1.0f, 1.0f);
-                glBegin(GL_QUADS);
-                glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614+152);
-                glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2-64,    486+152);
-                glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2+64, 486+152);
-                glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614+152);
-                glEnd();
-                glBindTexture(GL_TEXTURE_2D, 0);
-        
-                render();
-                
-                sleep(2);
-        
-                glBindTexture(GL_TEXTURE_2D, twoTexture);
-                glColor3f(1.0f, 1.0f, 1.0f);
-                glBegin(GL_QUADS);
-                glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614+152);
-                glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2-64,    486+152);
-                glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2+64, 486+152);
-                glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614+152);
-                glEnd();
-                glBindTexture(GL_TEXTURE_2D, 0);
-        
-                render();
-                
-                sleep(2);
-        
-                glBindTexture(GL_TEXTURE_2D, oneTexture);
-                glColor3f(1.0f, 1.0f, 1.0f);
-                glBegin(GL_QUADS);
-                glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614+152);
-                glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2-64,    486+152);
-                glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2+64, 486+152);
-                glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614+152);
-                glEnd();
-                glBindTexture(GL_TEXTURE_2D, 0);
-        
-                render();
-                
-                sleep(2);
-        
-                glBindTexture(GL_TEXTURE_2D, zeroTexture);
-
-                glColor3f(1.0f, 1.0f, 1.0f);
-                glBegin(GL_QUADS);
-                glTexCoord2f(0.0f, 0.0f);  glVertex2i(xres/2-64,    614+152);
-                glTexCoord2f(0.0f, 1.0f); glVertex2i(xres/2-64,    486+152);
-                glTexCoord2f(1.0f, 1.0f); glVertex2i(xres/2+64, 486+152);
-                glTexCoord2f(1.0f, 0.0f);  glVertex2i(xres/2+64, 614+152);
-                glEnd();
-                glBindTexture(GL_TEXTURE_2D, 0);
-                }
- */
-        
         //Always render every frame.
         render();
         x11.swapBuffers();
